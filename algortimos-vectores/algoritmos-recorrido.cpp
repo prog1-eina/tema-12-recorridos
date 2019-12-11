@@ -20,10 +20,10 @@ using namespace std;
  */
 void mostrar(const Persona T[], const int n) {
     for (int i = 0; i < n; i++) {
-        // Se han mostrado las persona de las primeras i-1 componentes de «T»
+        // Se han mostrado las personas de las primeras i-1 componentes de «T»
         mostrar(T[i]);
         cout << endl;
-        // Se han mostrado las persona de las primeras «i» componentes de «T»
+        // Se han mostrado las personas de las primeras «i» componentes de «T»
     }
 }
 

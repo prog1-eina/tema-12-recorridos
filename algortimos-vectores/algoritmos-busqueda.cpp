@@ -11,7 +11,7 @@
 
 /*
  * Pre:  n > 0 y «T» tiene al menos «n» componentes.
- * Post: Si entre las personas almacenados en las primeras «n» componentes del
+ * Post: Si entre las personas almacenadas en las primeras «n» componentes del
  *       vector «T» hay uno cuyo DNI es igual a «dniBuscado», entonces ha devuelto
  *       el índice de dicho elemento en la tabla; si no lo hay, ha devuelto un
  *       dato negativo.
@@ -44,7 +44,7 @@ int buscar(const Persona T[], const int n, const int dniBuscado) {
  * Pre:  n > 0, «T» tiene al menos «n» componentes y los elementos de las primeras
  *       «n» componentes del vector «T» están ordenados por valores del DNI
  *       crecientes.
- * Post: Si entre las personas almacenados en las primeras «n» componentes del
+ * Post: Si entre las personas almacenadas en las primeras «n» componentes del
  *       vector «T» hay una cuyo DNI es igual a «dniBuscado», entonces ha devuelto
  *       el índice de dicho elemento en la tabla; si no lo hay, ha devuelto un
  *       valor negativo.
@@ -84,7 +84,7 @@ int buscarDicotomico(const Persona T[], const int n, const int dniBuscado) {
 
 /*
  * Pre:  n > 0 y «T» tiene al menos «n» componentes.
- * Post: Si entre las personas almacenados en las primeras «n» componentes del
+ * Post: Si entre las personas almacenadas en las primeras «n» componentes del
  *       vector «T» hay una nacida en el año «agno», entonces ha devuelto el
  *       índice de dicho elemento en la tabla; si no la hay, ha devuelto un valor
  *       negativo.

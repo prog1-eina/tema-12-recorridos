@@ -21,8 +21,8 @@ void permutar (Persona &una, Persona &otra) {
 /*
  * Pre:  n > 0 y «T» tiene al menos «n» componentes.
  * Post: Las primeras «n» componentes del vector «T» es una permutación de los
- *       datos iniciales de «T» en la que todos los Personas solteros tienen un
- *       índice en la tabla menor que cualquier Persona casado.
+ *       datos iniciales de «T» en la que todos las personas solteras tienen un
+ *       índice en la tabla menor que cualquier persona casada.
  */
 
 void distribuir(Persona T[], const int n) {
@@ -75,10 +75,10 @@ void distribuir(Persona T[], const int n) {
 void ordenarPorDNI(Persona T[], const int n) {
     // Ordenación de una tabla por el método de selección
     for (int i = 0; i < n - 1; i++) {
-        /* Los Personas de  las primeras i-1 componentes de «T» son los de menor
-         * valor de DNI y ya están ordenados */
+        /* Las personas de las primeras i-1 componentes de «T» son las de menor
+         * valor de DNI y ya están ordenadas */
 
-        // Selección del Persona con menor valor de DNI de T[i..n-1]
+        // Selección de la persona con menor valor de DNI de T[i..n-1]
         int iMenor = i;
         for (int j = i + 1; j < n; j++) {
             // T[iMenor] es el de menor DNI de T[i..j-1]
@@ -89,8 +89,8 @@ void ordenarPorDNI(Persona T[], const int n) {
         }
         // T[iMenor] es el de menor DNI de T[i..n-1]. Permuta T[i] y T[iMenor]
         permutar(T[i], T[iMenor]);
-        /* Los Personas de  las primeras i-1 componentes del vector «T» son los
-         * de menor valor de DNI y ya están ordenados */
+        /* Las personas de las primeras i-1 componentes del vector «T» son las
+         * de menor valor de DNI y ya están ordenadas */
     }
 }
 

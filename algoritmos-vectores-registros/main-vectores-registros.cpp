@@ -14,8 +14,8 @@
  * volver a compilar este proyecto.
 \********************************************************************************/
 #include <iostream>
-#include "persona.h"
-#include "algoritmos-vectores.h"
+#include "persona.hpp"
+#include "algoritmos-vectores-registros.hpp"
 using namespace std;
 
 

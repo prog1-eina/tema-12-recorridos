@@ -21,7 +21,6 @@ void permutar (int& dato1, int& dato2) {
  *       datos iniciales de «T» en la que todos los datos pares tienen un
  *       índice en la tabla menor que cualquiera de los impares.
  */
-
 void distribuir(int T[], const unsigned int n) {
     int inf = 0;
     int sup = n - 1;

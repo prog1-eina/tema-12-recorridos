@@ -16,7 +16,7 @@
  *       el índice de dicho elemento en la tabla; si no lo hay, ha devuelto un
  *       dato negativo.
  */
-int buscar(const Persona T[], const int n, const int dniBuscado) {
+int buscar(const Persona T[], const int n, const unsigned int dniBuscado) {
     int i = 0;
     bool encontrado = false;
 
@@ -49,7 +49,8 @@ int buscar(const Persona T[], const int n, const int dniBuscado) {
  *       el índice de dicho elemento en la tabla; si no lo hay, ha devuelto un
  *       valor negativo.
  */
-int buscarDicotomico(const Persona T[], const int n, const int dniBuscado) {
+int buscarDicotomico(const Persona T[], const int n, 
+                     const unsigned int dniBuscado) {
     // Espacio de búsqueda: establecimiento en T[0..n-1]
     int inf = 0;
     int sup = n - 1;
@@ -89,7 +90,7 @@ int buscarDicotomico(const Persona T[], const int n, const int dniBuscado) {
  *       índice de dicho elemento en la tabla; si no la hay, ha devuelto un valor
  *       negativo.
  */
-int nacidoEn(const Persona T[], const int n, const int agno) {
+int nacidoEn(const Persona T[], const int n, const unsigned int agno) {
     // Se ha programado un algoritmo de búsqueda secuencial comenzando
     // por el elemento T[0]
 

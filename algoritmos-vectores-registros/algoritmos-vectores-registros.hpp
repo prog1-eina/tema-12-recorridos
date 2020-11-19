@@ -38,7 +38,7 @@ Persona masEdad(const Persona T[], const int n);
  *       el índice de dicho elemento en la tabla; si no lo hay, ha devuelto un
  *       dato negativo.
  */
-int buscar(const Persona T[], const int n, const int dniBuscado);
+int buscar(const Persona T[], const int n, const unsigned int dniBuscado);
 
 /*
  * Pre:  n > 0, «T» tiene al menos «n» componentes y los elementos de las primeras
@@ -49,7 +49,7 @@ int buscar(const Persona T[], const int n, const int dniBuscado);
  *       el índice de dicho elemento en la tabla; si no lo hay, ha devuelto un
  *       valor negativo.
  */
-int buscarDicotomico(const Persona T[], const int n, const int dniBuscado);
+int buscarDicotomico(const Persona T[], const int n, const unsigned int dniBuscado);
 
 /*
  * Pre:  n > 0 y «T» tiene al menos «n» componentes.
@@ -58,7 +58,7 @@ int buscarDicotomico(const Persona T[], const int n, const int dniBuscado);
  *       índice de dicho elemento en la tabla; si no la hay, ha devuelto un valor
  *       negativo.
  */
-int nacidoEn(const Persona T[], const int n, const int agno);
+int nacidoEn(const Persona T[], const int n, const unsigned int agno);
 
 /*
  * Pre:  n > 0 y «T» tiene al menos «n» componentes.

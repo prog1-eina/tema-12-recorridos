@@ -44,7 +44,7 @@ OBJECTS_REGISTROS = $(addprefix $(BUILD_DIR)/, 1-algoritmos-recorrido-regs.o \
 # de ficheros objeto de los que depende el programa «racionales».
 OBJECTS_PRIMITIVOS = $(addprefix $(BUILD_DIR)/, 1-algoritmos-recorrido-ints.o \
 				2-algoritmos-busqueda-ints.o 3-algoritmos-modificacion-ints.o \
-				main-vectores-ints.o)
+				main-vectores-enteros.o)
 
 ################################################################################
 ## Reglas del fichero «Makefile»

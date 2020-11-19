@@ -8,7 +8,7 @@
 \********************************************************************************/
 
 #include <iostream>
-#include "persona.h"
+#include "persona.hpp"
 using namespace std;
 
 

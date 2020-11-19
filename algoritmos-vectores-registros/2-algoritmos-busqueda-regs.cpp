@@ -6,7 +6,7 @@
  * Codificación de caracteres original de este fichero: UTF-8 con BOM
 \********************************************************************************/
 
-#include "persona.h"
+#include "persona.hpp"
 
 
 /*

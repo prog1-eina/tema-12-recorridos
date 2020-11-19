@@ -30,7 +30,7 @@ void mostrar(const int T[], const unsigned int n) {
  */
 unsigned int numNegativos(const int T[], const unsigned int n) {
    /* Aún no se ha identificado ningún negativo. */
-   int cuenta = 0;
+   unsigned int cuenta = 0;
    for (unsigned int i = 0; i < n; i++) {
       /* cuenta == nº de negativos de las primeras «i» - 1 componentes de «T» */
       if (T[i] < 0) {

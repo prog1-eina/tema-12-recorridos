@@ -65,7 +65,7 @@ Persona masEdad(const Persona T[], const unsigned int n) {
         // indMayor == índice de la persona de más edad de entre las primeras
         // «i» componentes del vector «T»
     }
-    // indMayor == índice de la persona de más dedad en las primeras «n»
+    // indMayor == índice de la persona de más edad en las primeras «n»
     // componentes de «T»
     return T[indMayor];
 }

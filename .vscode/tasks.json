@@ -1,0 +1,51 @@
+{
+    "tasks": [
+        {
+            "label": "Compilar «ejemplo-vectores-registros»",
+            "type": "shell",
+            "command": "make",
+            "windows": {
+                "command": "mingw32-make.exe",
+            },
+            "args": [
+                "ejemplo-vectores-registros"
+            ],
+            "problemMatcher": ["$gcc"],
+            "group": "build",
+        },
+        {
+            "label": "Ejecutar «ejemplo-vectores-registros»",
+            "type": "shell",
+            "command": "bin/ejemplo-vectores-registros",
+            "windows": {
+                "command": "chcp 65001 ; bin\\ejemplo-vectores-registros.exe",
+            },
+            "dependsOn": "Compilar «ejemplo-vectores-registros»",
+            "problemMatcher": ["$gcc"],
+        },
+        {
+            "label": "Compilar «ejemplo-vectores-enteros»",
+            "type": "shell",
+            "command": "make",
+            "windows": {
+                "command": "mingw32-make.exe",
+            },
+            "args": [
+                "ejemplo-vectores-enteros"
+            ],
+            "problemMatcher": ["$gcc"],
+            "group": "build",
+        },
+        {
+            "label": "Ejecutar «ejemplo-vectores-enteros»",
+            "type": "shell",
+            "command": "bin/ejemplo-vectores-enteros",
+            "windows": {
+                "command": "chcp 65001 ; bin\\ejemplo-vectores-enteros.exe",
+            },
+            "dependsOn": "Compilar «ejemplo-vectores-enteros»",
+            "problemMatcher": ["$gcc"],
+        },
+    ],
+    "version": "2.0.0"
+}

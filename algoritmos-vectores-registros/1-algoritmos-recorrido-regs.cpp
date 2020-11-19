@@ -55,7 +55,7 @@ unsigned int numSolteros(const Persona T[], const unsigned int n) {
  */
 Persona masEdad(const Persona T[], const unsigned int n) {
     // indMayor == índice de la persona de más edad;
-    // incialmente: primera componente del vector «T»
+    // inicialmente: primera componente del vector «T»
     unsigned int indMayor = 0;
     for (unsigned int i = 1; i < n; i++) {
         // indMayor == índice de la persona de más edad de entre las primeras

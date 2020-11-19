@@ -10,26 +10,26 @@
 #include "persona.hpp"
 
 /*
- * Pre:  n ≥ 0 y «T» tiene al menos «n» componentes.
+ * Pre:  «T» tiene al menos «n» componentes.
  * Post: Presenta por pantalla un listado de la información de las personas de
  *       las primeras «n» componentes del vector «T», a razón de una persona
  *       por línea y añade una línea adicional en blanco.
  */
-void mostrar(const Persona T[], const int n);
+void mostrar(const Persona T[], const unsigned int n);
 
 /*
- * Pre:  n ≥ 0 y «T» tiene al menos «n» componentes.
+ * Pre:  «T» tiene al menos «n» componentes.
  * Post: Ha devuelto el número de solteros de las primeras «n» componentes del
- *       vector «T»
+ *       vector «T».
  */
-int numSolteros(const Persona T[], const int n);
+int numSolteros(const Persona T[], const unsigned int n);
 
 /*
- * Pre:  n > 0 y «T» tiene al menos «n» componentes.
+ * Pre:  «T» tiene al menos «n» componentes.
  * Post: Ha devuelto la persona de más edad de entre las primeras «n»
  *       componentes del vector «T».
  */
-Persona masEdad(const Persona T[], const int n);
+Persona masEdad(const Persona T[], const unsigned int n);
 
 /*
  * Pre:  n > 0 y «T» tiene al menos «n» componentes.
@@ -38,7 +38,7 @@ Persona masEdad(const Persona T[], const int n);
  *       el índice de dicho elemento en la tabla; si no lo hay, ha devuelto un
  *       dato negativo.
  */
-int buscar(const Persona T[], const int n, const unsigned int dniBuscado);
+int buscar(const Persona T[], const unsigned int n, const unsigned int dniBuscado);
 
 /*
  * Pre:  n > 0, «T» tiene al menos «n» componentes y los elementos de las primeras
@@ -49,7 +49,7 @@ int buscar(const Persona T[], const int n, const unsigned int dniBuscado);
  *       el índice de dicho elemento en la tabla; si no lo hay, ha devuelto un
  *       valor negativo.
  */
-int buscarDicotomico(const Persona T[], const int n, const unsigned int dniBuscado);
+int buscarDicotomico(const Persona T[], const unsigned int n, const unsigned int dniBuscado);
 
 /*
  * Pre:  n > 0 y «T» tiene al menos «n» componentes.
@@ -58,7 +58,7 @@ int buscarDicotomico(const Persona T[], const int n, const unsigned int dniBusca
  *       índice de dicho elemento en la tabla; si no la hay, ha devuelto un valor
  *       negativo.
  */
-int nacidoEn(const Persona T[], const int n, const unsigned int agno);
+int nacidoEn(const Persona T[], const unsigned int n, const unsigned int agno);
 
 /*
  * Pre:  n > 0 y «T» tiene al menos «n» componentes.
@@ -66,7 +66,7 @@ int nacidoEn(const Persona T[], const int n, const unsigned int agno);
  *       datos iniciales de «T» en la que todos los Personas solteros tienen un
  *       índice en la tabla menor que cualquier Persona casado.
  */
-void distribuir(Persona T[], const int n);
+void distribuir(Persona T[], const unsigned int n);
 
 /*
  * Pre:  n > 0 y «T» tiene al menos «n»
@@ -78,7 +78,7 @@ void distribuir(Persona T[], const int n);
  *       ordenados de forma que tienen valores
  *       del DNI crecientes.
  */
-void ordenarPorDNI(Persona T[], const int n);
+void ordenarPorDNI(Persona T[], const unsigned int n);
 
 /*
  * Pre:  n > 0 y «T» tiene al menos «n» componentes.
@@ -87,4 +87,4 @@ void ordenarPorDNI(Persona T[], const int n);
  *       ordenadas de forma que cada una ha nacido en una fecha igual o anterior
  *       a la siguiente en la tabla «T».
  */
-void ordenarPorEdad(Persona T[], const int n);
+void ordenarPorEdad(Persona T[], const unsigned int n);

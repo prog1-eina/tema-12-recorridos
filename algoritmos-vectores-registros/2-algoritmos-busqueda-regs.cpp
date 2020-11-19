@@ -10,14 +10,14 @@
 
 
 /*
- * Pre:  n > 0 y «T» tiene al menos «n» componentes.
+ * Pre:  «T» tiene al menos «n» componentes.
  * Post: Si entre las personas almacenadas en las primeras «n» componentes del
  *       vector «T» hay uno cuyo DNI es igual a «dniBuscado», entonces ha devuelto
  *       el índice de dicho elemento en la tabla; si no lo hay, ha devuelto un
  *       dato negativo.
  */
-int buscar(const Persona T[], const int n, const unsigned int dniBuscado) {
-    int i = 0;
+int buscar(const Persona T[], const unsigned int n, const unsigned int dniBuscado) {
+    unsigned int i = 0;
     bool encontrado = false;
 
     /* Búsqueda */
@@ -41,7 +41,7 @@ int buscar(const Persona T[], const int n, const unsigned int dniBuscado) {
 
 
 /*
- * Pre:  n > 0, «T» tiene al menos «n» componentes y los elementos de las primeras
+ * Pre:  «T» tiene al menos «n» componentes y los elementos de las primeras
  *       «n» componentes del vector «T» están ordenados por valores del DNI
  *       crecientes.
  * Post: Si entre las personas almacenadas en las primeras «n» componentes del
@@ -49,7 +49,7 @@ int buscar(const Persona T[], const int n, const unsigned int dniBuscado) {
  *       el índice de dicho elemento en la tabla; si no lo hay, ha devuelto un
  *       valor negativo.
  */
-int buscarDicotomico(const Persona T[], const int n, 
+int buscarDicotomico(const Persona T[], const unsigned int n, 
                      const unsigned int dniBuscado) {
     // Espacio de búsqueda: establecimiento en T[0..n-1]
     int inf = 0;
@@ -84,18 +84,18 @@ int buscarDicotomico(const Persona T[], const int n,
 
 
 /*
- * Pre:  n > 0 y «T» tiene al menos «n» componentes.
+ * Pre:  «T» tiene al menos «n» componentes.
  * Post: Si entre las personas almacenadas en las primeras «n» componentes del
  *       vector «T» hay una nacida en el año «agno», entonces ha devuelto el
  *       índice de dicho elemento en la tabla; si no la hay, ha devuelto un valor
  *       negativo.
  */
-int nacidoEn(const Persona T[], const int n, const unsigned int agno) {
+int nacidoEn(const Persona T[], const unsigned int n, const unsigned int agno) {
     // Se ha programado un algoritmo de búsqueda secuencial comenzando
     // por el elemento T[0]
 
     // Establece el espacio inicial de búsqueda T[i..n-1], es decir, T[0..n-1]
-    int i = 0;
+    unsigned int i = 0;
     // Por el momento no se ha encontrado lo que se busca
     bool encontrado = false;
 

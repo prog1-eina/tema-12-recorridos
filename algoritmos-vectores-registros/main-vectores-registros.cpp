@@ -24,7 +24,7 @@ using namespace std;
  * este proyecto.
  */
 int main() {
-    const int NUM_DATOS = 9;
+    const unsigned int NUM_DATOS = 9;
     Persona ganadoresPremioCervantes[NUM_DATOS] = {
             {"Joan",        "Margarit i Consarnau", {3297388, 'Q'}, {11,  5, 1938}, true, false}, 
             {"Eduardo",     "Mendoza Garriga",      { 195326, 'X'}, {11,  1, 1943}, true, false}, 

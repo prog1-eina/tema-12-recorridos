@@ -1,10 +1,9 @@
-/********************************************************************************\
+/******************************************************************************\
  * Curso de Programación 1. Tema 12 (Algoritmos básicos con vectores)
  * Autores: Miguel Ángel Latre
- * Última revisión: 18 de noviembre de 2019
+ * Última revisión: 19 de noviembre de 2020
  * Resumen: Programa de prueba de las funciones de recorrido de vectores
  *          programadas en este proyecto.
- * Codificación de caracteres original de este fichero: UTF-8 sin BOM
  * Dependencias: módulos «nif», «fecha» y «persona», ubicados en directorios de
  * distintos proyectos del área de trabajo correspondiente al tema 11 (registros).
  * 
@@ -12,7 +11,7 @@
  * lista de inclusión de ficheros de interfaz. Puede modificarse en «Project
  * settings» si no coincidieran con las ubicaciones del equipo en el que se quiera
  * volver a compilar este proyecto.
-\********************************************************************************/
+\******************************************************************************/
 #include <iostream>
 #include "persona.hpp"
 #include "algoritmos-vectores-registros.hpp"

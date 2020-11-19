@@ -1,10 +1,9 @@
-﻿/********************************************************************************\
+﻿/******************************************************************************\
  * Curso de Programación 1. Tema 12 (Algoritmos con vectores)
  * Autores: Javier Martínez y Miguel Ángel Latre
- * Última revisión: 18 de noviembre de 2019
+ * Última revisión: 19 de noviembre de 2020
  * Resumen: Algunas funciones que modifican el contenido de vectores o tablas.
- * Codificación de caracteres original de este fichero: UTF-8 con BOM
-\********************************************************************************/
+\******************************************************************************/
 
 #include "persona.hpp"
 

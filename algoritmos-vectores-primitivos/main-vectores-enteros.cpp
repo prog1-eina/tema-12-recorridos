@@ -47,7 +47,7 @@ int main() {
     cout << "=========" << endl;
     int indice = buscar(vector, NUM_DATOS, -4);
     if (indice >= 0) {
-        cout << "El dato " << -4 << " está en el índice:" << indice << endl;
+        cout << "El dato " << -4 << " está en el índice: " << indice << endl;
     }
     else {
         cout << "Parece que la función «buscar» no funciona bien." << endl;
@@ -72,7 +72,7 @@ int main() {
     
     indice = buscarDicotomico(vector, NUM_DATOS, -4);
     if (indice >= 0) {
-        cout << "El dato " << -4 << " está en el índice:" << indice << endl;
+        cout << "El dato " << -4 << " está en el índice: " << indice << endl;
     }
     else {
         cout << "Parece que la función «buscarDicotomico» no funciona bien." << endl;

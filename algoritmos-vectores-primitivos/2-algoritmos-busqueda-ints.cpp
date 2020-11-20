@@ -38,6 +38,52 @@ int buscar(const int T[], const unsigned int n, const int datoBuscado) {
 
 
 /*
+ * Pre:  «T» tiene al menos «n» componentes.
+ * Post: Si entre los datos almacenados en las primeras «n» componentes del
+ *       vector «T» hay uno cuyo valor es igual a «datoBuscado», entonces ha
+ *       devuelto el índice de dicho elemento en la tabla; si no lo hay, ha
+ *       devuelto un dato negativo.
+ */
+int buscar2(const int T[], const unsigned int n, const int datoBuscado) {
+    unsigned int i = 0;
+
+    /* Búsqueda */
+    while (i < n && T[i] != datoBuscado) {
+            i++;
+    } // i ≥ n || T[i] == datoBuscado
+
+    /* Discriminación del éxito */
+    if (i < n) {
+        return i;
+    }
+    else {
+        return -1;
+    }
+}
+
+/*
+ * Pre:  «T» tiene al menos «n» componentes y en al
+ *       menos una de ellas se encuentra «datoBuscado».
+ * Post: Si entre los datos almacenados en las
+ *       primeras «n» componentes del vector
+ *       «T» hay uno cuyo valor es igual a
+ *       «datoBuscado», entonces ha devuelto el
+ *       índice de dicho elemento en la tabla; si no
+ *       lo hay, ha devuelto un dato negativo.
+ */
+unsigned int buscarGarantizado(const int T[], const int datoBuscado) {
+    unsigned int i = 0;
+
+    /* Búsqueda */
+    while (T[i] != datoBuscado) {
+            i++;
+    } // T[i] == datoBuscado
+
+    return i;
+}
+
+
+/*
  * Pre:  «T» tiene al menos «n» componentes y los elementos de las primeras
  *       «n» componentes del vector «T» están ordenados por valores crecientes.
  * Post: Si entre las personas almacenadas en las primeras «n» componentes del

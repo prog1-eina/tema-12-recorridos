@@ -38,6 +38,15 @@ int maximo(const int T[], const unsigned int n);
 int buscar(const int T[], const unsigned int n, const int datoBuscado);
 
 /*
+ * Pre:  «T» tiene al menos «n» componentes.
+ * Post: Si entre los datos almacenados en las primeras «n» componentes del
+ *       vector «T» hay uno cuyo valor es igual a «datoBuscado», entonces ha
+ *       devuelto el índice de dicho elemento en la tabla; si no lo hay, ha
+ *       devuelto un dato negativo.
+ */
+int buscar2(const int T[], const unsigned int n, const int datoBuscado);
+
+/*
  * Pre:  «T» tiene al menos «n» componentes y los elementos de las primeras
  *       «n» componentes del vector «T» están ordenados por valores crecientes.
  * Post: Si entre las personas almacenadas en las primeras «n» componentes del

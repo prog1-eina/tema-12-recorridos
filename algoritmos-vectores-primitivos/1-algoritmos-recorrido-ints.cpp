@@ -44,7 +44,7 @@ unsigned int numNegativos(const int T[], const unsigned int n) {
 
 
 /*
- * Pre:  «T» tiene al menos «n» componentes.
+ * Pre:  «T» tiene al menos «n» componentes  y n > 0.
  * Post: Ha devuelto el máximo valor de entre los de las primeras «n»
  *       componentes del vector «T».
  */

@@ -84,8 +84,9 @@ unsigned int buscarGarantizado(const int T[], const int datoBuscado) {
 
 
 /*
- * Pre:  «T» tiene al menos «n» componentes y los elementos de las primeras
- *       «n» componentes del vector «T» están ordenados por valores crecientes.
+ * Pre:  «T» tiene al menos «n» componentes, n > 0 y los elementos de las 
+ *       primeras «n» componentes del vector «T» están ordenados por valores 
+ *       crecientes.
  * Post: Si entre las personas almacenadas en las primeras «n» componentes del
  *       vector «T» hay una cuyo valor es igual a «datoBuscado», entonces ha
  *       devuelto el índice de dicho elemento en la tabla; si no lo hay, ha
@@ -94,14 +95,14 @@ unsigned int buscarGarantizado(const int T[], const int datoBuscado) {
 int buscarDicotomico(const int T[], const unsigned int n, 
                      const int datoBuscado) {
     // Espacio de búsqueda: establecimiento en T[0..n-1]
-    int inf = 0;
-    int sup = n - 1;
+    unsigned int inf = 0;
+    unsigned int sup = n - 1;
 
     /* Búsqueda */
     // Espacio de búsqueda: T[0..n-1]
     while (inf < sup) {
         // Espacio de búsqueda: T[inf..sup]
-        int medio = (inf + sup) / 2;
+        unsigned int medio = (inf + sup) / 2;
         if (datoBuscado > T[medio]) {
             // Espacio de búsqueda: T[medio+1..sup]
             inf = medio + 1;

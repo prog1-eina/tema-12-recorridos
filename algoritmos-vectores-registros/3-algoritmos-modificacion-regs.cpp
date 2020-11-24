@@ -2,7 +2,7 @@
  * Curso de Programación 1. Tema 12 (Algoritmos con vectores)
  * Autores: Javier Martínez y Miguel Ángel Latre
  * Última revisión: 19 de noviembre de 2020
- * Resumen: Algunas funciones que modifican el contenido de vectores o tablas.
+ * Resumen: Algunas funciones que modifican el contenido de vectores
 \******************************************************************************/
 
 #include "persona.hpp"
@@ -21,7 +21,7 @@ void permutar (Persona &una, Persona &otra) {
  * Pre:  «T» tiene al menos «n» componentes.
  * Post: Las primeras «n» componentes del vector «T» es una permutación de los
  *       datos iniciales de «T» en la que todos las personas solteras tienen un
- *       índice en la tabla menor que cualquier persona casada.
+ *       índice en el vector menor que cualquier persona casada.
  */
 
 void distribuir(Persona T[], const unsigned int n) {
@@ -35,7 +35,7 @@ void distribuir(Persona T[], const unsigned int n) {
         // Falta por distribuir los elementos en el intervalo [inf, sup].
         if (!T[inf].estaCasado) {
             // T[inf] está soltero; por lo tanto está bien situado,
-            // al principio de la tabla.
+            // al principio del vector.
             inf = inf + 1;
         }
         else if (T[sup].estaCasado) {
@@ -44,7 +44,7 @@ void distribuir(Persona T[], const unsigned int n) {
         }
         else {
             // T[inf] está casado y T[sup] está soltero; por ello van a ser
-            // permutados, para ser colocados en la parte de la tabla que les
+            // permutados, para ser colocados en la parte del vector que les
             // corresponde.
             permutar(T[inf], T[sup]);
             inf = inf + 1;
@@ -72,7 +72,7 @@ void distribuir(Persona T[], const unsigned int n) {
  *       del DNI crecientes.
  */
 void ordenarPorDNI(Persona T[], const unsigned int n) {
-    // Ordenación de una tabla por el método de selección
+    // Ordenación de un vector por el método de selección
     for (unsigned int i = 0; i < n - 1; i++) {
         /* Las personas de las primeras i-1 componentes de «T» son las de menor
          * valor de DNI y ya están ordenadas */
@@ -99,10 +99,10 @@ void ordenarPorDNI(Persona T[], const unsigned int n) {
  * Post: El contenido de las primeras «n» componentes del vector «T» es una
  *       permutación del contenido inicial de «T» en la que todas ellas están
  *       ordenadas de forma que cada una ha nacido en una fecha igual o anterior
- *       a la siguiente en la tabla «T».
+ *       a la siguiente en el vector «T».
  */
 void ordenarPorEdad(Persona T[], const unsigned int n) {
-    // Se ha programado un algoritmo de ordenación de una tabla por el método
+    // Se ha programado un algoritmo de ordenación de un vector por el método
     // de selección.
 
     // En cada iteración se permuta el elemento T[i] con el menor de los elementos

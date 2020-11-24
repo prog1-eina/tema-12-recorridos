@@ -2,7 +2,7 @@
  * Curso de Programación 1. Tema 12 (Algoritmos con vectores)
  * Autores: Javier Martínez y Miguel Ángel Latre
  * Última revisión: 19 de noviembre de 2020
- * Resumen: Algunas funciones de búsqueda de información en vectores o tablas.
+ * Resumen: Algunas funciones de búsqueda de información en vectores.
 \******************************************************************************/
 
 
@@ -10,7 +10,7 @@
  * Pre:  «T» tiene al menos «n» componentes.
  * Post: Si entre los datos almacenados en las primeras «n» componentes del
  *       vector «T» hay uno cuyo valor es igual a «datoBuscado», entonces ha
- *       devuelto el índice de dicho elemento en la tabla; si no lo hay, ha
+ *       devuelto el índice de dicho elemento en el vector; si no lo hay, ha
  *       devuelto un dato negativo.
  */
 int buscar(const int T[], const unsigned int n, const int datoBuscado) {
@@ -41,7 +41,7 @@ int buscar(const int T[], const unsigned int n, const int datoBuscado) {
  * Pre:  «T» tiene al menos «n» componentes.
  * Post: Si entre los datos almacenados en las primeras «n» componentes del
  *       vector «T» hay uno cuyo valor es igual a «datoBuscado», entonces ha
- *       devuelto el índice de dicho elemento en la tabla; si no lo hay, ha
+ *       devuelto el índice de dicho elemento en el vector; si no lo hay, ha
  *       devuelto un dato negativo.
  */
 int buscar2(const int T[], const unsigned int n, const int datoBuscado) {
@@ -68,7 +68,7 @@ int buscar2(const int T[], const unsigned int n, const int datoBuscado) {
  *       primeras «n» componentes del vector
  *       «T» hay uno cuyo valor es igual a
  *       «datoBuscado», entonces ha devuelto el
- *       índice de dicho elemento en la tabla; si no
+ *       índice de dicho elemento en el vector; si no
  *       lo hay, ha devuelto un dato negativo.
  */
 unsigned int buscarGarantizado(const int T[], const int datoBuscado) {
@@ -89,7 +89,7 @@ unsigned int buscarGarantizado(const int T[], const int datoBuscado) {
  *       crecientes.
  * Post: Si entre las personas almacenadas en las primeras «n» componentes del
  *       vector «T» hay una cuyo valor es igual a «datoBuscado», entonces ha
- *       devuelto el índice de dicho elemento en la tabla; si no lo hay, ha
+ *       devuelto el índice de dicho elemento en el vector; si no lo hay, ha
  *       devuelto un valor negativo.
  */
 int buscarDicotomico(const int T[], const unsigned int n, 

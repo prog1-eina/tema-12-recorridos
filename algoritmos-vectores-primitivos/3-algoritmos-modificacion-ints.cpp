@@ -2,7 +2,7 @@
  * Curso de Programación 1. Tema 12 (Algoritmos con vectores)
  * Autores: Javier Martínez y Miguel Ángel Latre
  * Última revisión: 19 de noviembre de 2020
- * Resumen: Algunas funciones que modifican el contenido de vectores o tablas.
+ * Resumen: Algunas funciones que modifican el contenido de vectores.
 \******************************************************************************/
 
 /*
@@ -19,7 +19,7 @@ void permutar (int& dato1, int& dato2) {
  * Pre:  «T» tiene al menos «n» componentes.
  * Post: Las primeras «n» componentes del vector «T» son una permutación de los
  *       datos iniciales de «T» en la que todos los datos pares tienen un
- *       índice en la tabla menor que cualquiera de los impares.
+ *       índice en el vector menor que cualquiera de los impares.
  */
 void distribuir(int T[], const unsigned int n) {
     int inf = 0;
@@ -40,7 +40,7 @@ void distribuir(int T[], const unsigned int n) {
         }
         else {
             // T[inf] es impar y T[sup] es par; por ello van a ser permutados, 
-            // para ser colocados en la parte de la tabla que les corresponde.
+            // para ser colocados en la parte del vector que les corresponde.
             permutar(T[inf], T[sup]);
             inf = inf + 1;
             sup = sup - 1;
@@ -63,7 +63,7 @@ void distribuir(int T[], const unsigned int n) {
  *       ordenados de forma que tienen valores del DNI crecientes.
  */
 void ordenar(int T[], const unsigned int n) {
-    // Ordenación de una tabla por el método de selección
+    // Ordenación de un vector por el método de selección
     for (unsigned int i = 0; i < n - 1; i++) {
         /* Los datos de las primeras i-1 componentes de «T» son los de menor
          * valor y ya están ordenados. */

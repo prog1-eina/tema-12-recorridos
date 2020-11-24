@@ -2,8 +2,7 @@
  * Curso de Programación 1. Tema 12 (Algoritmos con vectores)
  * Autores: Javier Martínez y Miguel Ángel Latre
  * Última revisión: 19 de noviembre de 2020
- * Resumen: Algunas funciones de recorrido de todos los elementos de un vector o
- *          tabla.
+ * Resumen: Algunas funciones de recorrido de todos los elementos de un vector.
 \******************************************************************************/
 
 #include <iostream>

@@ -35,7 +35,7 @@ Persona masEdad(const Persona T[], const unsigned int n);
  * Pre:  n > 0 y «T» tiene al menos «n» componentes.
  * Post: Si entre las personas almacenados en las primeras «n» componentes del
  *       vector «T» hay uno cuyo DNI es igual a «dniBuscado», entonces ha devuelto
- *       el índice de dicho elemento en la tabla; si no lo hay, ha devuelto un
+ *       el índice de dicho elemento en el vector; si no lo hay, ha devuelto un
  *       dato negativo.
  */
 int buscar(const Persona T[], const unsigned int n, const unsigned int dniBuscado);
@@ -46,7 +46,7 @@ int buscar(const Persona T[], const unsigned int n, const unsigned int dniBuscad
  *       crecientes.
  * Post: Si entre las personas almacenados en las primeras «n» componentes del
  *       vector «T» hay una cuyo DNI es igual a «dniBuscado», entonces ha devuelto
- *       el índice de dicho elemento en la tabla; si no lo hay, ha devuelto un
+ *       el índice de dicho elemento en el vector; si no lo hay, ha devuelto un
  *       valor negativo.
  */
 int buscarDicotomico(const Persona T[], const unsigned int n, const unsigned int dniBuscado);
@@ -55,7 +55,7 @@ int buscarDicotomico(const Persona T[], const unsigned int n, const unsigned int
  * Pre:  n > 0 y «T» tiene al menos «n» componentes.
  * Post: Si entre las personas almacenados en las primeras «n» componentes del
  *       vector «T» hay una nacida en el año «agno», entonces ha devuelto el
- *       índice de dicho elemento en la tabla; si no la hay, ha devuelto un valor
+ *       índice de dicho elemento en el vector; si no la hay, ha devuelto un valor
  *       negativo.
  */
 int nacidoEn(const Persona T[], const unsigned int n, const unsigned int agno);
@@ -64,7 +64,7 @@ int nacidoEn(const Persona T[], const unsigned int n, const unsigned int agno);
  * Pre:  n > 0 y «T» tiene al menos «n» componentes.
  * Post: Las primeras «n» componentes del vector «T» es una permutación de los
  *       datos iniciales de «T» en la que todos los Personas solteros tienen un
- *       índice en la tabla menor que cualquier Persona casado.
+ *       índice en el vector menor que cualquier Persona casado.
  */
 void distribuir(Persona T[], const unsigned int n);
 
@@ -85,6 +85,6 @@ void ordenarPorDNI(Persona T[], const unsigned int n);
  * Post: El contenido de las primeras «n» componentes del vector «T» es una
  *       permutación del contenido inicial de «T» en la que todas ellas están
  *       ordenadas de forma que cada una ha nacido en una fecha igual o anterior
- *       a la siguiente en la tabla «T».
+ *       a la siguiente en el vector «T».
  */
 void ordenarPorEdad(Persona T[], const unsigned int n);

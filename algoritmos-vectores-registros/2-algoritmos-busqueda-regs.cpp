@@ -2,7 +2,7 @@
  * Curso de Programación 1. Tema 12 (Algoritmos con vectores)
  * Autores: Javier Martínez y Miguel Ángel Latre
  * Última revisión: 19 de noviembre de 2020
- * Resumen: Algunas funciones de búsqueda de información en vectores o tablas.
+ * Resumen: Algunas funciones de búsqueda de información en vectores
 \******************************************************************************/
 
 #include "persona.hpp"
@@ -12,7 +12,7 @@
  * Pre:  «T» tiene al menos «n» componentes.
  * Post: Si entre las personas almacenadas en las primeras «n» componentes del
  *       vector «T» hay uno cuyo DNI es igual a «dniBuscado», entonces ha devuelto
- *       el índice de dicho elemento en la tabla; si no lo hay, ha devuelto un
+ *       el índice de dicho elemento en el vector; si no lo hay, ha devuelto un
  *       dato negativo.
  */
 int buscar(const Persona T[], const unsigned int n, const unsigned int dniBuscado) {
@@ -45,7 +45,7 @@ int buscar(const Persona T[], const unsigned int n, const unsigned int dniBuscad
  *       DNI crecientes.
  * Post: Si entre las personas almacenadas en las primeras «n» componentes del
  *       vector «T» hay una cuyo DNI es igual a «dniBuscado», entonces ha devuelto
- *       el índice de dicho elemento en la tabla; si no lo hay, ha devuelto un
+ *       el índice de dicho elemento en el vector; si no lo hay, ha devuelto un
  *       valor negativo.
  */
 int buscarDicotomico(const Persona T[], const unsigned int n, 
@@ -86,7 +86,7 @@ int buscarDicotomico(const Persona T[], const unsigned int n,
  * Pre:  «T» tiene al menos «n» componentes.
  * Post: Si entre las personas almacenadas en las primeras «n» componentes del
  *       vector «T» hay una nacida en el año «agno», entonces ha devuelto el
- *       índice de dicho elemento en la tabla; si no la hay, ha devuelto un valor
+ *       índice de dicho elemento en el vector; si no la hay, ha devuelto un valor
  *       negativo.
  */
 int nacidoEn(const Persona T[], const unsigned int n, const unsigned int agno) {

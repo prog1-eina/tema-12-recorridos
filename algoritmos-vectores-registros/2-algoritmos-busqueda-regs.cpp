@@ -40,7 +40,7 @@ int buscar(const Persona T[], const unsigned int n, const unsigned int dniBuscad
 
 
 /*
- * Pre:  «T» tiene al menos «n» componentes, n > 0 y los elementos de las
+ * Pre:  «T» tiene al menos «n» componentes y los elementos de las
  *       primeras «n» componentes del vector «T» están ordenados por valores del 
  *       DNI crecientes.
  * Post: Si entre las personas almacenadas en las primeras «n» componentes del
@@ -50,34 +50,40 @@ int buscar(const Persona T[], const unsigned int n, const unsigned int dniBuscad
  */
 int buscarDicotomico(const Persona T[], const unsigned int n, 
                      const unsigned int dniBuscado) {
-    // Espacio de búsqueda: establecimiento en T[0..n-1]
-    unsigned int inf = 0;
-    unsigned int sup = n - 1;
-
-    /* Búsqueda */
-    // Espacio de búsqueda: T[0..n-1]
-    while (inf < sup) {
-        // Espacio de búsqueda: T[inf..sup]
-        unsigned int medio = (inf + sup) / 2;
-        if (dniBuscado > T[medio].nif.dni) {
-            // Espacio de búsqueda: T[medio+1..sup]
-            inf = medio + 1;
-        }
-        else {
-            // Espacio de búsqueda: T[inf..medio]
-            sup = medio;
-        }
-        // Espacio de búsqueda: T[inf..sup]
-    }
-    // inf >= sup
-    // Espacio de búsqueda: T[inf]
-
-    /* Discriminación del éxito */
-    if (T[inf].nif.dni == dniBuscado) {
-        return inf;
+    if (n == 0) {
+        // Si hay 0 componentes, el dato no está
+        return false;
     }
     else {
-        return -1;
+        // Espacio de búsqueda: establecimiento en T[0..n-1]
+        unsigned int inf = 0;
+        unsigned int sup = n - 1;
+
+        /* Búsqueda */
+        // Espacio de búsqueda: T[0..n-1]
+        while (inf < sup) {
+            // Espacio de búsqueda: T[inf..sup]
+            unsigned int medio = (inf + sup) / 2;
+            if (dniBuscado > T[medio].nif.dni) {
+                // Espacio de búsqueda: T[medio+1..sup]
+                inf = medio + 1;
+            }
+            else {
+                // Espacio de búsqueda: T[inf..medio]
+                sup = medio;
+            }
+            // Espacio de búsqueda: T[inf..sup]
+        }
+        // inf >= sup
+        // Espacio de búsqueda: T[inf]
+
+        /* Discriminación del éxito */
+        if (T[inf].nif.dni == dniBuscado) {
+            return inf;
+        }
+        else {
+            return -1;
+        }
     }
 }
 
@@ -98,7 +104,7 @@ int nacidoEn(const Persona T[], const unsigned int n, const unsigned int agno) {
     // Por el momento no se ha encontrado lo que se busca
     bool encontrado = false;
 
-    while (!encontrado && i<n) {
+    while (!encontrado && i < n) {
         // No ha habido éxito tras buscar en T[0..i-1]. Analiza el elemento T[i]
         if (agno == T[i].nacimiento.agno) {
             // La búsqueda debe concluir ya que T[i] es el elemento buscado

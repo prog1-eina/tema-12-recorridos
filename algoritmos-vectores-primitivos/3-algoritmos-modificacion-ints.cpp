@@ -57,30 +57,32 @@ void distribuir(int T[], const unsigned int n) {
 
 
 /*
- * Pre:  n > 0 y «T» tiene al menos «n» componentes.
+ * Pre:  «T» tiene al menos «n» componentes.
  * Post: El contenido de las primeras «n» componentes del vector «T» es una
  *       permutación del contenido inicial de «T» en la que todos ellos están
  *       ordenados de forma que tienen valores del DNI crecientes.
  */
 void ordenar(int T[], const unsigned int n) {
-    // Ordenación de un vector por el método de selección
-    for (unsigned int i = 0; i < n - 1; i++) {
-        /* Los datos de las primeras i-1 componentes de «T» son los de menor
-         * valor y ya están ordenados. */
+    if (n != 0) {
+        // Ordenación de un vector por el método de selección
+        for (unsigned int i = 0; i < n - 1; i++) {
+            /* Los datos de las primeras i-1 componentes de «T» son los de menor
+            * valor y ya están ordenados. */
 
-        // Selección del dato de menor valor de T[i..n-1]
-        unsigned int iMenor = i;
-        for (unsigned int j = i + 1; j < n; j++) {
-            // T[iMenor] es el de menor valor de T[i..j-1]
-            if (T[j] < T[iMenor]) {
-                iMenor = j;
+            // Selección del dato de menor valor de T[i..n-1]
+            unsigned int iMenor = i;
+            for (unsigned int j = i + 1; j < n; j++) {
+                // T[iMenor] es el de menor valor de T[i..j-1]
+                if (T[j] < T[iMenor]) {
+                    iMenor = j;
+                }
+                // T[iMenor] es el de menor valor de T[i..j]
             }
-            // T[iMenor] es el de menor valor de T[i..j]
+            // T[iMenor] es el de menor valor de T[i..n-1]. Permuta T[i] y T[iMenor]
+            permutar(T[i], T[iMenor]);
+            /* Los datos de las primeras i-1 componentes del vector «T» son los
+            * de menor valor y ya están ordenadas */
         }
-        // T[iMenor] es el de menor valor de T[i..n-1]. Permuta T[i] y T[iMenor]
-        permutar(T[i], T[iMenor]);
-        /* Los datos de las primeras i-1 componentes del vector «T» son los
-         * de menor valor y ya están ordenadas */
     }
 }
 

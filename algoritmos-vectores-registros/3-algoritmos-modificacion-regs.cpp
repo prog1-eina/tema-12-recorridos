@@ -62,8 +62,7 @@ void distribuir(Persona T[], const unsigned int n) {
 
 
 /*
- * Pre:  n > 0 y «T» tiene al menos «n»
- *       componentes.
+ * Pre:  «T» tiene al menos «n» componentes.
  * Post: El contenido de las primeras «n»
  *       componentes del vector «T» es una
  *       permutación del contenido iniciales de
@@ -72,58 +71,62 @@ void distribuir(Persona T[], const unsigned int n) {
  *       del DNI crecientes.
  */
 void ordenarPorDNI(Persona T[], const unsigned int n) {
-    // Ordenación de un vector por el método de selección
-    for (unsigned int i = 0; i < n - 1; i++) {
-        /* Las personas de las primeras i-1 componentes de «T» son las de menor
-         * valor de DNI y ya están ordenadas */
+    if (n != 0) {
+        // Ordenación de un vector por el método de selección
+        for (unsigned int i = 0; i < n - 1; i++) {
+            /* Las personas de las primeras i-1 componentes de «T» son las de menor
+            * valor de DNI y ya están ordenadas */
 
-        // Selección de la persona con menor valor de DNI de T[i..n-1]
-        unsigned int iMenor = i;
-        for (unsigned int j = i + 1; j < n; j++) {
-            // T[iMenor] es el de menor DNI de T[i..j-1]
-            if (T[j].nif.dni < T[iMenor].nif.dni) {
-                iMenor = j;
+            // Selección de la persona con menor valor de DNI de T[i..n-1]
+            unsigned int iMenor = i;
+            for (unsigned int j = i + 1; j < n; j++) {
+                // T[iMenor] es el de menor DNI de T[i..j-1]
+                if (T[j].nif.dni < T[iMenor].nif.dni) {
+                    iMenor = j;
+                }
+                // T[iMenor] es el de menor DNI de T[i..j]
             }
-            // T[iMenor] es el de menor DNI de T[i..j]
+            // T[iMenor] es el de menor DNI de T[i..n-1]. Permuta T[i] y T[iMenor]
+            permutar(T[i], T[iMenor]);
+            /* Las personas de las primeras i-1 componentes del vector «T» son las
+            * de menor valor de DNI y ya están ordenadas */
         }
-        // T[iMenor] es el de menor DNI de T[i..n-1]. Permuta T[i] y T[iMenor]
-        permutar(T[i], T[iMenor]);
-        /* Las personas de las primeras i-1 componentes del vector «T» son las
-         * de menor valor de DNI y ya están ordenadas */
     }
 }
 
 
 /*
- * Pre:  n > 0 y «T» tiene al menos «n» componentes.
+ * Pre:  «T» tiene al menos «n» componentes.
  * Post: El contenido de las primeras «n» componentes del vector «T» es una
  *       permutación del contenido inicial de «T» en la que todas ellas están
  *       ordenadas de forma que cada una ha nacido en una fecha igual o anterior
  *       a la siguiente en el vector «T».
  */
 void ordenarPorEdad(Persona T[], const unsigned int n) {
-    // Se ha programado un algoritmo de ordenación de un vector por el método
-    // de selección.
+    if (n != 0) {
+        // Se ha programado un algoritmo de ordenación de un vector por el método
+        // de selección.
 
-    // En cada iteración se permuta el elemento T[i] con el menor de los elementos
-    // de T[i..n-1].
-    for (unsigned int i = 0; i < n - 1; ++i) {
-        // Las personas de T[0..i-1] son las de más edad y ya están ordenadas
-        // según edades decrecientes.
-        // Selecciona la persona de más edad de T[i..n-1].
-        unsigned int iMayor = i;
-        for (unsigned int j = i + 1; j < n; ++j) {
-            // T[iMayor] es la persona de más edad de T[i..j-1].
-            if (esMayorQue(T[j],T[iMayor])) {
-                iMayor = j;
+        // En cada iteración se permuta el elemento T[i] con el menor de los elementos
+        // de T[i..n-1].
+        for (unsigned int i = 0; i < n - 1; ++i) {
+            // Las personas de T[0..i-1] son las de más edad y ya están ordenadas
+            // según edades decrecientes.
+            // Selecciona la persona de más edad de T[i..n-1].
+            unsigned int iMayor = i;
+            for (unsigned int j = i + 1; j < n; ++j) {
+                // T[iMayor] es la persona de más edad de T[i..j-1].
+                if (esMayorQue(T[j],T[iMayor])) {
+                    iMayor = j;
+                }
+                // T[iMayor] es la persona de más edad de T[i..j].
             }
-            // T[iMayor] es la persona de más edad de T[i..j].
+            // T[iMayor] es la persona de más edad de T[i..n-1] y, por ello,
+            // permuta T[i] y T[iMayor].
+            permutar(T[i], T[iMayor]);
+            // Las personas de T[0..i] son las de más edad y ya están ordenadas.
         }
-        // T[iMayor] es la persona de más edad de T[i..n-1] y, por ello,
-        // permuta T[i] y T[iMayor].
-        permutar(T[i], T[iMayor]);
-        // Las personas de T[0..i] son las de más edad y ya están ordenadas.
+        // Las personas de T[0..n-1] ya están ordenadas.
     }
-    // Las personas de T[0..n-1] ya están ordenadas.
 }
 

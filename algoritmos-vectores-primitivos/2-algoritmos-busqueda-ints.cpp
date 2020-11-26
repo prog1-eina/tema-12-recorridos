@@ -84,7 +84,7 @@ unsigned int buscarGarantizado(const int T[], const int datoBuscado) {
 
 
 /*
- * Pre:  «T» tiene al menos «n» componentes, n > 0 y los elementos de las 
+ * Pre:  «T» tiene al menos «n» componentes y los elementos de las 
  *       primeras «n» componentes del vector «T» están ordenados por valores 
  *       crecientes.
  * Post: Si entre las personas almacenadas en las primeras «n» componentes del
@@ -94,33 +94,39 @@ unsigned int buscarGarantizado(const int T[], const int datoBuscado) {
  */
 int buscarDicotomico(const int T[], const unsigned int n, 
                      const int datoBuscado) {
-    // Espacio de búsqueda: establecimiento en T[0..n-1]
-    unsigned int inf = 0;
-    unsigned int sup = n - 1;
-
-    /* Búsqueda */
-    // Espacio de búsqueda: T[0..n-1]
-    while (inf < sup) {
-        // Espacio de búsqueda: T[inf..sup]
-        unsigned int medio = (inf + sup) / 2;
-        if (datoBuscado > T[medio]) {
-            // Espacio de búsqueda: T[medio+1..sup]
-            inf = medio + 1;
-        }
-        else {
-            // Espacio de búsqueda: T[inf..medio]
-            sup = medio;
-        }
-        // Espacio de búsqueda: T[inf..sup]
-    }
-    // inf >= sup
-    // Espacio de búsqueda: T[inf]
-
-    /* Discriminación del éxito */
-    if (T[inf] == datoBuscado) {
-        return inf;
+    if (n == 0) {
+        // Si hay 0 componentes, el dato no está
+        return false;
     }
     else {
-        return -1;
+        // Espacio de búsqueda: establecimiento en T[0..n-1]
+        unsigned int inf = 0;
+        unsigned int sup = n - 1;
+
+        /* Búsqueda */
+        // Espacio de búsqueda: T[0..n-1]
+        while (inf < sup) {
+            // Espacio de búsqueda: T[inf..sup]
+            unsigned int medio = (inf + sup) / 2;
+            if (datoBuscado > T[medio]) {
+                // Espacio de búsqueda: T[medio+1..sup]
+                inf = medio + 1;
+            }
+            else {
+                // Espacio de búsqueda: T[inf..medio]
+                sup = medio;
+            }
+            // Espacio de búsqueda: T[inf..sup]
+        }
+        // inf >= sup
+        // Espacio de búsqueda: T[inf]
+
+        /* Discriminación del éxito */
+        if (T[inf] == datoBuscado) {
+            return inf;
+        }
+        else {
+            return -1;
+        }
     }
 }

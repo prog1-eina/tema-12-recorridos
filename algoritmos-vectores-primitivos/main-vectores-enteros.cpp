@@ -27,8 +27,8 @@ using namespace std;
  * este proyecto.
  */
 int main() {
-    const unsigned int NUM_DATOS = 9;
-    int vector[NUM_DATOS] = {3, 0, 5, -1, 2, -6, -4, 8, -9};
+    const unsigned NUM_DATOS = 0/*9*/;
+    int vector[/*NUM_DATOS*/] = {3, 0, 5, -1, 2, -6, -4, 8, -9};
 
     cout << "DATOS DEL VECTOR" << endl;
     cout << "================" << endl;    

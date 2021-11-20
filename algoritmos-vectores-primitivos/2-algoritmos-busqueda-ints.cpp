@@ -13,8 +13,8 @@
  *       devuelto el índice de dicho elemento en el vector; si no lo hay, ha
  *       devuelto un dato negativo.
  */
-int buscar(const int T[], const unsigned int n, const int datoBuscado) {
-    unsigned int i = 0;
+int buscar(const int T[], const unsigned n, const int datoBuscado) {
+    unsigned i = 0;
     bool encontrado = false;
 
     /* Búsqueda */
@@ -44,8 +44,8 @@ int buscar(const int T[], const unsigned int n, const int datoBuscado) {
  *       devuelto el índice de dicho elemento en el vector; si no lo hay, ha
  *       devuelto un dato negativo.
  */
-int buscar2(const int T[], const unsigned int n, const int datoBuscado) {
-    unsigned int i = 0;
+int buscar2(const int T[], const unsigned n, const int datoBuscado) {
+    unsigned i = 0;
 
     /* Búsqueda */
     while (i < n && T[i] != datoBuscado) {
@@ -71,8 +71,8 @@ int buscar2(const int T[], const unsigned int n, const int datoBuscado) {
  *       índice de dicho elemento en el vector; si no
  *       lo hay, ha devuelto un dato negativo.
  */
-unsigned int buscarGarantizado(const int T[], const int datoBuscado) {
-    unsigned int i = 0;
+unsigned buscarGarantizado(const int T[], const int datoBuscado) {
+    unsigned i = 0;
 
     /* Búsqueda */
     while (T[i] != datoBuscado) {
@@ -92,7 +92,7 @@ unsigned int buscarGarantizado(const int T[], const int datoBuscado) {
  *       devuelto el índice de dicho elemento en el vector; si no lo hay, ha
  *       devuelto un valor negativo.
  */
-int buscarDicotomico(const int T[], const unsigned int n, 
+int buscarDicotomico(const int T[], const unsigned n, 
                      const int datoBuscado) {
     if (n == 0) {
         // Si hay 0 componentes, el dato no está
@@ -100,14 +100,14 @@ int buscarDicotomico(const int T[], const unsigned int n,
     }
     else {
         // Espacio de búsqueda: establecimiento en T[0..n-1]
-        unsigned int inf = 0;
-        unsigned int sup = n - 1;
+        unsigned inf = 0;
+        unsigned sup = n - 1;
 
         /* Búsqueda */
         // Espacio de búsqueda: T[0..n-1]
         while (inf < sup) {
             // Espacio de búsqueda: T[inf..sup]
-            unsigned int medio = (inf + sup) / 2;
+            unsigned medio = (inf + sup) / 2;
             if (datoBuscado > T[medio]) {
                 // Espacio de búsqueda: T[medio+1..sup]
                 inf = medio + 1;

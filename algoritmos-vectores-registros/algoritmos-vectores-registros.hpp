@@ -15,21 +15,21 @@
  *       las primeras «n» componentes del vector «T», a razón de una persona
  *       por línea y añade una línea adicional en blanco.
  */
-void mostrar(const Persona T[], const unsigned int n);
+void mostrar(const Persona T[], const unsigned n);
 
 /*
  * Pre:  «T» tiene al menos «n» componentes.
- * Post: Ha devuelto el número de solteros de las primeras «n» componentes del
+ * Post: Ha devuelto el número de casados de las primeras «n» componentes del
  *       vector «T».
  */
-int numSolteros(const Persona T[], const unsigned int n);
+unsigned numCasados(const Persona T[], const unsigned n);
 
 /*
- * Pre:  «T» tiene al menos «n» componentes.
+ * Pre:  n > 0 y «T» tiene al menos «n» componentes.
  * Post: Ha devuelto la persona de más edad de entre las primeras «n»
  *       componentes del vector «T».
  */
-Persona masEdad(const Persona T[], const unsigned int n);
+Persona masEdad(const Persona T[], const unsigned n);
 
 /*
  * Pre:  n > 0 y «T» tiene al menos «n» componentes.
@@ -38,7 +38,7 @@ Persona masEdad(const Persona T[], const unsigned int n);
  *       el índice de dicho elemento en el vector; si no lo hay, ha devuelto un
  *       dato negativo.
  */
-int buscar(const Persona T[], const unsigned int n, const unsigned int dniBuscado);
+int buscar(const Persona T[], const unsigned n, const unsigned dniBuscado);
 
 /*
  * Pre:  n > 0, «T» tiene al menos «n» componentes y los elementos de las primeras
@@ -49,7 +49,7 @@ int buscar(const Persona T[], const unsigned int n, const unsigned int dniBuscad
  *       el índice de dicho elemento en el vector; si no lo hay, ha devuelto un
  *       valor negativo.
  */
-int buscarDicotomico(const Persona T[], const unsigned int n, const unsigned int dniBuscado);
+int buscarDicotomico(const Persona T[], const unsigned n, const unsigned dniBuscado);
 
 /*
  * Pre:  n > 0 y «T» tiene al menos «n» componentes.
@@ -58,7 +58,7 @@ int buscarDicotomico(const Persona T[], const unsigned int n, const unsigned int
  *       índice de dicho elemento en el vector; si no la hay, ha devuelto un valor
  *       negativo.
  */
-int nacidoEn(const Persona T[], const unsigned int n, const unsigned int agno);
+int nacidoEn(const Persona T[], const unsigned n, const unsigned agno);
 
 /*
  * Pre:  n > 0 y «T» tiene al menos «n» componentes.
@@ -66,7 +66,7 @@ int nacidoEn(const Persona T[], const unsigned int n, const unsigned int agno);
  *       datos iniciales de «T» en la que todos los Personas solteros tienen un
  *       índice en el vector menor que cualquier Persona casado.
  */
-void distribuir(Persona T[], const unsigned int n);
+void distribuir(Persona T[], const unsigned n);
 
 /*
  * Pre:  n > 0 y «T» tiene al menos «n»
@@ -78,7 +78,7 @@ void distribuir(Persona T[], const unsigned int n);
  *       ordenados de forma que tienen valores
  *       del DNI crecientes.
  */
-void ordenarPorDNI(Persona T[], const unsigned int n);
+void ordenarPorDNI(Persona T[], const unsigned n);
 
 /*
  * Pre:  n > 0 y «T» tiene al menos «n» componentes.
@@ -87,4 +87,4 @@ void ordenarPorDNI(Persona T[], const unsigned int n);
  *       ordenadas de forma que cada una ha nacido en una fecha igual o anterior
  *       a la siguiente en el vector «T».
  */
-void ordenarPorEdad(Persona T[], const unsigned int n);
+void ordenarPorEdad(Persona T[], const unsigned n);

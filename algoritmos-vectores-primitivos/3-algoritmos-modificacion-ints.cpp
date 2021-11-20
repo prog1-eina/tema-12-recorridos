@@ -21,7 +21,7 @@ void permutar (int& dato1, int& dato2) {
  *       datos iniciales de «T» en la que todos los datos pares tienen un
  *       índice en el vector menor que cualquiera de los impares.
  */
-void distribuir(int T[], const unsigned int n) {
+void distribuir(int T[], const unsigned n) {
     int inf = 0;
     int sup = n - 1;
     // Los elementos de «T» con índices en el intervalo [inf, sup], es decir,
@@ -62,16 +62,16 @@ void distribuir(int T[], const unsigned int n) {
  *       permutación del contenido inicial de «T» en la que todos ellos están
  *       ordenados de forma que tienen valores del DNI crecientes.
  */
-void ordenar(int T[], const unsigned int n) {
+void ordenar(int T[], const unsigned n) {
     if (n != 0) {
         // Ordenación de un vector por el método de selección
-        for (unsigned int i = 0; i < n - 1; i++) {
+        for (unsigned i = 0; i < n - 1; i++) {
             /* Los datos de las primeras i-1 componentes de «T» son los de menor
             * valor y ya están ordenados. */
 
             // Selección del dato de menor valor de T[i..n-1]
-            unsigned int iMenor = i;
-            for (unsigned int j = i + 1; j < n; j++) {
+            unsigned iMenor = i;
+            for (unsigned j = i + 1; j < n; j++) {
                 // T[iMenor] es el de menor valor de T[i..j-1]
                 if (T[j] < T[iMenor]) {
                     iMenor = j;

@@ -14,10 +14,10 @@ using namespace std;
  * Pre:  «T» tiene al menos «n» componentes.
  * Post: Presenta por pantalla un listado de la información de las personas de
  *       las primeras «n» componentes del vector «T», a razón de una persona
- *       por línea y añade una línea adicional en blanco.
+ *       por línea.
  */
-void mostrar(const Persona T[], const unsigned int n) {
-    for (unsigned int i = 0; i < n; i++) {
+void mostrar(const Persona T[], const unsigned n) {
+    for (unsigned i = 0; i < n; i++) {
         // Se han mostrado las personas de las primeras i-1 componentes de «T»
         mostrar(T[i]);
         cout << endl;
@@ -28,34 +28,34 @@ void mostrar(const Persona T[], const unsigned int n) {
 
 /*
  * Pre:  «T» tiene al menos «n» componentes.
- * Post: Ha devuelto el número de solteros de las primeras «n» componentes del
+ * Post: Ha devuelto el número de casados de las primeras «n» componentes del
  *       vector «T».
  */
-unsigned int numSolteros(const Persona T[], const unsigned int n) {
+unsigned numCasados(const Persona T[], const unsigned n) {
    /* Aún no se ha identificado ningún soltero. */
    int cuenta = 0;
-   for (unsigned int i = 0; i < n; i++) {
-      /* cuenta == nº de solteros de las primeras «i» - 1 componentes de «T» */
+   for (unsigned i = 0; i < n; i++) {
+      /* cuenta == nº de casados de las primeras «i» - 1 componentes de «T» */
       if (!T[i].estaCasado) {
             cuenta = cuenta + 1;
         }
-      /* cuenta == nº de solteros de las primeras «i» componentes de «T» */
+      /* cuenta == nº de casados de las primeras «i» componentes de «T» */
     }
-    /* cuenta == nº de solteros de las primeras «n» componentes de «T» */
+    /* cuenta == nº de casados de las primeras «n» componentes de «T» */
     return cuenta;
 }
 
 
 /*
- * Pre:  «T» tiene al menos «n» componentes.
+ * Pre:  n > 0 y «T» tiene al menos «n» componentes.
  * Post: Ha devuelto la persona de más edad de entre las primeras «n»
  *       componentes del vector «T».
  */
-Persona masEdad(const Persona T[], const unsigned int n) {
+Persona masEdad(const Persona T[], const unsigned n) {
     // indMayor == índice de la persona de más edad;
     // inicialmente: primera componente del vector «T»
-    unsigned int indMayor = 0;
-    for (unsigned int i = 1; i < n; i++) {
+    unsigned indMayor = 0;
+    for (unsigned i = 1; i < n; i++) {
         // indMayor == índice de la persona de más edad de entre las primeras
         // «i» - 1 componentes del vector «T»
         if (esMayorQue(T[i], T[indMayor])) {

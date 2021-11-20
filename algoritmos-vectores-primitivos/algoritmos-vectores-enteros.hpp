@@ -12,21 +12,21 @@
  * Post: Presenta por pantalla un listado con los elementos de las primeras «n» 
  *       componentes del vector «T», a razón de un elemento por línea.
  */
-void mostrar(const int T[], const unsigned int n);
+void mostrar(const int T[], const unsigned n);
 
 /*
  * Pre:  «T» tiene al menos «n» componentes.
  * Post: Ha devuelto el número de datos negativos de las primeras «n»
  *       componentes del vector «T».
  */
-unsigned int numNegativos(const int T[], const unsigned int n);
+unsigned numNegativos(const int T[], const unsigned n);
 
 /*
  * Pre:  «T» tiene al menos «n» componentes y n > 0.
  * Post: Ha devuelto el máximo valor de entre los de las primeras «n»
  *       componentes del vector «T».
  */
-int maximo(const int T[], const unsigned int n);
+int maximo(const int T[], const unsigned n);
 
 /*
  * Pre:  «T» tiene al menos «n» componentes.
@@ -35,7 +35,7 @@ int maximo(const int T[], const unsigned int n);
  *       devuelto el índice de dicho elemento en el vector; si no lo hay, ha
  *       devuelto un dato negativo.
  */
-int buscar(const int T[], const unsigned int n, const int datoBuscado);
+int buscar(const int T[], const unsigned n, const int datoBuscado);
 
 /*
  * Pre:  «T» tiene al menos «n» componentes.
@@ -44,7 +44,7 @@ int buscar(const int T[], const unsigned int n, const int datoBuscado);
  *       devuelto el índice de dicho elemento en el vector; si no lo hay, ha
  *       devuelto un dato negativo.
  */
-int buscar2(const int T[], const unsigned int n, const int datoBuscado);
+int buscar2(const int T[], const unsigned n, const int datoBuscado);
 
 /*
  * Pre:  «T» tiene al menos «n» componentes y los elementos de las primeras
@@ -54,7 +54,7 @@ int buscar2(const int T[], const unsigned int n, const int datoBuscado);
  *       devuelto el índice de dicho elemento en el vector; si no lo hay, ha
  *       devuelto un valor negativo.
  */
-int buscarDicotomico(const int T[], const unsigned int n, const int datoBuscado);
+int buscarDicotomico(const int T[], const unsigned n, const int datoBuscado);
 
 /*
  * Pre:  «T» tiene al menos «n» componentes.
@@ -63,7 +63,7 @@ int buscarDicotomico(const int T[], const unsigned int n, const int datoBuscado)
  *       índice en el vector menor que cualquiera de los impares.
  */
 
-void distribuir(int T[], const unsigned int n);
+void distribuir(int T[], const unsigned n);
 
 /*
  * Pre:  n > 0 y «T» tiene al menos «n» componentes.
@@ -71,4 +71,4 @@ void distribuir(int T[], const unsigned int n);
  *       permutación del contenido inicial de «T» en la que todos ellos están
  *       ordenados de forma que tienen valores del DNI crecientes.
  */
-void ordenar(int T[], const unsigned int n);
+void ordenar(int T[], const unsigned n);

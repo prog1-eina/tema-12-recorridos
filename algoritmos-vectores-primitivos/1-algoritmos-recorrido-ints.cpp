@@ -14,8 +14,8 @@ using namespace std;
  * Post: Presenta por pantalla un listado con los elementos de las primeras «n» 
  *       componentes del vector «T», a razón de un elemento por línea.
  */
-void mostrar(const int T[], const unsigned int n) {
-    for (unsigned int i = 0; i < n; i++) {
+void mostrar(const int T[], const unsigned n) {
+    for (unsigned i = 0; i < n; i++) {
         // Se han mostrado los enteros de las primeras i-1 componentes de «T»
         cout << T[i] << endl;
         // Se han mostrado los enteros de las primeras «i» componentes de «T»
@@ -28,10 +28,10 @@ void mostrar(const int T[], const unsigned int n) {
  * Post: Ha devuelto el número de datos negativos de las primeras «n»
  *       componentes del vector «T».
  */
-unsigned int numNegativos(const int T[], const unsigned int n) {
+unsigned numNegativos(const int T[], const unsigned n) {
    /* Aún no se ha identificado ningún negativo. */
-   unsigned int cuenta = 0;
-   for (unsigned int i = 0; i < n; i++) {
+   unsigned cuenta = 0;
+   for (unsigned i = 0; i < n; i++) {
       /* cuenta == nº de negativos de las primeras «i» - 1 componentes de «T» */
       if (T[i] < 0) {
             cuenta++;
@@ -48,11 +48,11 @@ unsigned int numNegativos(const int T[], const unsigned int n) {
  * Post: Ha devuelto el máximo valor de entre los de las primeras «n»
  *       componentes del vector «T».
  */
-int maximo(const int T[], const unsigned int n) {
+int maximo(const int T[], const unsigned n) {
     // indMayor == índice del dato de mayor valor;
     // inicialmente: primera componente del vector «T»
-    unsigned int indMayor = 0;
-    for (unsigned int i = 1; i < n; i++) {
+    unsigned indMayor = 0;
+    for (unsigned i = 1; i < n; i++) {
         // indMayor == índice del dato de mayor valor de entre las primeras
         // «i» - 1 componentes del vector «T»
         if (T[i] > T[indMayor]) {

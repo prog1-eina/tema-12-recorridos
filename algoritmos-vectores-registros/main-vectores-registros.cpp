@@ -30,19 +30,19 @@ using namespace std;
  * este proyecto.
  */
 int main() {
-    const unsigned int NUM_DATOS = 9;
-    Persona ganadoresPremioCervantes[NUM_DATOS] = {
-            {"Joan",        "Margarit i Consarnau", {3297388, 'Q'}, {11,  5, 1938}, true, false}, 
-            {"Eduardo",     "Mendoza Garriga",      { 195326, 'X'}, {11,  1, 1943}, true, false}, 
-            {"Juan",        "Goytisolo",            {3678970, 'M'}, { 5,  1, 1931}, true, false}, 
-            {"Ana María",   "Matute Ausejo",        { 824677, 'N'}, {26,  7, 1925}, true, true}, 
-            {"Juan",        "Marsé Carbó",          {1041468, 'M'}, { 8,  1, 1933}, true, false}, 
-            {"Camilo José", "Cela y Trulock",       {2758574, 'T'}, {11,  5, 1916}, true, false}, 
-            {"Mario",       "Vargas Llosa",         {4677522, 'N'}, {28,  3, 1936}, true, false}, 
-            {"Miguel",      "Delibes Setién",       { 801649, 'F'}, {17, 10, 1920}, true, false}, 
-            {"María",       "Zambrano Alarcón",     {4662531, 'V'}, {22,  4, 1904}, true, true}
+    const unsigned NUM_DATOS = 9;
+    Persona ganadoresPremioCervantes[] = {
+            {"Joan",        "Margarit i Consarnau", {3297388, 'Q'}, {11,  5, 1938}, false}, 
+            {"Eduardo",     "Mendoza Garriga",      { 195326, 'X'}, {11,  1, 1943}, false}, 
+            {"Juan",        "Goytisolo",            {3678970, 'M'}, { 5,  1, 1931}, false}, 
+            {"Ana María",   "Matute Ausejo",        { 824677, 'N'}, {26,  7, 1925}, true}, 
+            {"Juan",        "Marsé Carbó",          {1041468, 'M'}, { 8,  1, 1933}, false}, 
+            {"Camilo José", "Cela y Trulock",       {2758574, 'T'}, {11,  5, 1916}, false}, 
+            {"Mario",       "Vargas Llosa",         {4677522, 'N'}, {28,  3, 1936}, false}, 
+            {"Miguel",      "Delibes Setién",       { 801649, 'F'}, {17, 10, 1920}, false}, 
+            {"María",       "Zambrano Alarcón",     {4662531, 'V'}, {22,  4, 1904}, true}
     };
-    // NIF no reales, resto de datos obtenidos de Wikipedia (https://es.wikipedia.org/)
+    // NIF y estado civil no reales, resto de datos obtenidos de Wikipedia (https://es.wikipedia.org/)
 
     cout << "DATOS DEL VECTOR" << endl;
     cout << "================" << endl;    
@@ -50,7 +50,7 @@ int main() {
     cout << endl;
     
     cout << "NÚMERO DE PERSONAS SOLTERAS: ";
-    cout << numSolteros(ganadoresPremioCervantes, NUM_DATOS) << endl;    
+    cout << numCasados(ganadoresPremioCervantes, NUM_DATOS) << endl;    
     cout << endl;
 
     cout << "PERSONA DE MÁS EDAD" << endl;

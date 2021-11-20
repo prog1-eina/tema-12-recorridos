@@ -11,12 +11,12 @@
 /*
  * Pre:  «T» tiene al menos «n» componentes.
  * Post: Si entre las personas almacenadas en las primeras «n» componentes del
- *       vector «T» hay uno cuyo DNI es igual a «dniBuscado», entonces ha devuelto
- *       el índice de dicho elemento en el vector; si no lo hay, ha devuelto un
- *       dato negativo.
+ *       vector «T» hay uno cuyo DNI es igual a «dniBuscado», entonces ha
+ *       devuelto el índice de dicho elemento en el vector; si no lo hay, ha
+ *       devuelto un dato negativo.
  */
-int buscar(const Persona T[], const unsigned int n, const unsigned int dniBuscado) {
-    unsigned int i = 0;
+int buscar(const Persona T[], const unsigned n, const unsigned dniBuscado) {
+    unsigned i = 0;
     bool encontrado = false;
 
     /* Búsqueda */
@@ -44,26 +44,26 @@ int buscar(const Persona T[], const unsigned int n, const unsigned int dniBuscad
  *       primeras «n» componentes del vector «T» están ordenados por valores del 
  *       DNI crecientes.
  * Post: Si entre las personas almacenadas en las primeras «n» componentes del
- *       vector «T» hay una cuyo DNI es igual a «dniBuscado», entonces ha devuelto
- *       el índice de dicho elemento en el vector; si no lo hay, ha devuelto un
- *       valor negativo.
+ *       vector «T» hay una cuyo DNI es igual a «dniBuscado», entonces ha 
+ *       devuelto el índice de dicho elemento en el vector; si no lo hay, ha
+ *       devuelto un valor negativo.
  */
-int buscarDicotomico(const Persona T[], const unsigned int n, 
-                     const unsigned int dniBuscado) {
+int buscarDicotomico(const Persona T[], const unsigned n, 
+                     const unsigned dniBuscado) {
     if (n == 0) {
         // Si hay 0 componentes, el dato no está
         return false;
     }
     else {
         // Espacio de búsqueda: establecimiento en T[0..n-1]
-        unsigned int inf = 0;
-        unsigned int sup = n - 1;
+        unsigned inf = 0;
+        unsigned sup = n - 1;
 
         /* Búsqueda */
         // Espacio de búsqueda: T[0..n-1]
         while (inf < sup) {
             // Espacio de búsqueda: T[inf..sup]
-            unsigned int medio = (inf + sup) / 2;
+            unsigned medio = (inf + sup) / 2;
             if (dniBuscado > T[medio].nif.dni) {
                 // Espacio de búsqueda: T[medio+1..sup]
                 inf = medio + 1;
@@ -95,12 +95,12 @@ int buscarDicotomico(const Persona T[], const unsigned int n,
  *       índice de dicho elemento en el vector; si no la hay, ha devuelto un valor
  *       negativo.
  */
-int nacidoEn(const Persona T[], const unsigned int n, const unsigned int agno) {
+int nacidoEn(const Persona T[], const unsigned n, const unsigned agno) {
     // Se ha programado un algoritmo de búsqueda secuencial comenzando
     // por el elemento T[0]
 
     // Establece el espacio inicial de búsqueda T[i..n-1], es decir, T[0..n-1]
-    unsigned int i = 0;
+    unsigned i = 0;
     // Por el momento no se ha encontrado lo que se busca
     bool encontrado = false;
 

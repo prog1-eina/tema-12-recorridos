@@ -29,7 +29,7 @@ CXX = g++
 
 # Variable preestablecida de «make» que en la que se puede definir las opciones
 # con las que debe invocarse al compilador.
-CXXFLAGS = -g -Wall -Wextra -I../tema-11-registros/
+CXXFLAGS = -g -Wall -Wextra -I$(SOURCE_PERSONAS_DIR)
 
 
 ## FICHEROS OBJETO (RESULTADOS INTERMEDIOS DE COMPILACIÓN):

@@ -96,7 +96,7 @@ int buscarDicotomico(const int T[], const unsigned n,
                      const int datoBuscado) {
     if (n == 0) {
         // Si hay 0 componentes, el dato no está
-        return false;
+        return -1;
     }
     else {
         // Espacio de búsqueda: establecimiento en T[0..n-1]

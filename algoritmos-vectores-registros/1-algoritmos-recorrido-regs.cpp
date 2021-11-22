@@ -36,7 +36,7 @@ unsigned numCasados(const Persona T[], const unsigned n) {
    int cuenta = 0;
    for (unsigned i = 0; i < n; i++) {
       /* cuenta == nº de casados de las primeras «i» - 1 componentes de «T» */
-      if (!T[i].estaCasado) {
+      if (!T[i].estaCasada) {
             cuenta = cuenta + 1;
         }
       /* cuenta == nº de casados de las primeras «i» componentes de «T» */

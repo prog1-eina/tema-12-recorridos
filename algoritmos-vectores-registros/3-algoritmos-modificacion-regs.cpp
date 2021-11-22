@@ -32,11 +32,11 @@ void distribuir(Persona T[], const unsigned n) {
         // Las personas de «T» en los índices en [0, inf-1] son todas solteras y las que están 
         // en los índices [sup + 1, n - 1] son todas casadas. Falta por distribuir los
         // elementos en el intervalo [inf, sup].
-        if (!T[inf].estaCasado) {
+        if (!T[inf].estaCasada) {
             // T[inf] está soltero; por lo tanto está bien situado, al principio del vector.
             inf = inf + 1;
         }
-        else if (T[sup].estaCasado) {
+        else if (T[sup].estaCasada) {
             // T[sup] está casado; por lo tanto está bien situado al final.
             sup = sup - 1;
         }

@@ -50,10 +50,10 @@ OBJECTS_PRIMITIVOS = $(addprefix $(BUILD_DIR)/, 1-algoritmos-recorrido-ints.o \
 ## Reglas del fichero «Makefile»
 
 ejemplo-vectores-registros: $(OBJECTS_REGISTROS) | $(BIN_DIR)
-	$(CXX) -g $(OBJECTS_REGISTROS) -o $(BIN_DIR)/$@ 
+	$(CXX) -o $(BIN_DIR)/$@ -g $(OBJECTS_REGISTROS) -static 
 
 ejemplo-vectores-enteros: $(OBJECTS_PRIMITIVOS) | $(BIN_DIR)
-	$(CXX) -g $(OBJECTS_PRIMITIVOS) -o $(BIN_DIR)/$@ 
+	$(CXX) -o $(BIN_DIR)/$@ -g $(OBJECTS_PRIMITIVOS) -static 
 
 $(BUILD_DIR)/%.o: %.cpp | $(BUILD_DIR)
 	$(CXX) $(CXXFLAGS) -c $< -o $@  

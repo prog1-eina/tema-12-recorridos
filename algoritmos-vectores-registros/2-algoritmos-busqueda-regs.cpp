@@ -41,8 +41,8 @@ int buscar(const Persona T[], const unsigned n, const unsigned dniBuscado) {
 
 /*
  * Pre:  «T» tiene al menos «n» componentes y los elementos de las
- *       primeras «n» componentes del vector «T» están ordenados por valores del 
- *       DNI crecientes.
+ *       primeras «n» componentes del vector «T» ESTÁN ORDENADOS POR VALORES DEL 
+ *       DNI CRECIENTES.
  * Post: Si entre las personas almacenadas en las primeras «n» componentes del
  *       vector «T» hay una cuyo DNI es igual a «dniBuscado», entonces ha 
  *       devuelto el índice de dicho elemento en el vector; si no lo hay, ha

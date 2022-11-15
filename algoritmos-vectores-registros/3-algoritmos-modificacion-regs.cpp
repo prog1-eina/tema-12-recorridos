@@ -11,7 +11,7 @@
  * Pre:  una = A y otra = B
  * Post: una = B y otra = A
  */
-void permutar (Persona &una, Persona &otra) {
+void permutar(Persona& una, Persona& otra) {
     Persona aux = una;
     una = otra;
     otra = aux;

@@ -1,9 +1,9 @@
-﻿/******************************************************************************\
+﻿/************************************************************************************\
  * Curso de Programación 1. Tema 12 (Algoritmos con vectores)
  * Autores: Javier Martínez y Miguel Ángel Latre
  * Última revisión: 15 de noviembre de 2022
  * Resumen: Algunas funciones de recorrido de todos los elementos de un vector.
-\******************************************************************************/
+\************************************************************************************/
 
 #include <iostream>
 #include "persona.hpp"
@@ -12,9 +12,8 @@ using namespace std;
 
 /*
  * Pre:  «T» tiene al menos «n» componentes.
- * Post: Escribe en la pantalla un listado de la información de las personas de
- *       las primeras «n» componentes del vector «T», a razón de una persona
- *       por línea.
+ * Post: Escribe en la pantalla un listado de la información de las personas de las
+ *       primeras «n» componentes del vector «T», a razón de una persona por línea.
  */
 void mostrar(const Persona T[], const unsigned n) {
     for (unsigned i = 0; i < n; i++) {
@@ -28,12 +27,11 @@ void mostrar(const Persona T[], const unsigned n) {
 
 /*
  * Pre:  «T» tiene al menos «n» componentes.
- * Post: Devuelve el número de casados de las primeras «n» componentes del
- *       vector «T».
+ * Post: Devuelve el número de casados de las primeras «n» componentes del vector «T».
  */
 unsigned numCasados(const Persona T[], const unsigned n) {
    /* Aún no se ha identificado ningún soltero. */
-   int cuenta = 0;
+   unsigned cuenta = 0;
    for (unsigned i = 0; i < n; i++) {
       /* cuenta == nº de casados de las primeras «i» - 1 componentes de «T» */
       if (!T[i].estaCasada) {
@@ -48,8 +46,8 @@ unsigned numCasados(const Persona T[], const unsigned n) {
 
 /*
  * Pre:  n > 0 y «T» tiene al menos «n» componentes.
- * Post: Devuelve la persona de más edad de entre las primeras «n»
- *       componentes del vector «T».
+ * Post: Devuelve la persona de más edad de entre las primeras «n» componentes del
+ *       vector «T».
  */
 Persona masEdad(const Persona T[], const unsigned n) {
     // indMayor == índice de la persona de más edad;

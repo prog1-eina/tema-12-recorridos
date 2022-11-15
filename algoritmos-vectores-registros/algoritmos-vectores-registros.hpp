@@ -1,8 +1,7 @@
 /******************************************************************************\
  * Curso de Programación 1. Tema 12 (Algoritmos con vectores)
  * Autores: Javier Martínez y Miguel Ángel Latre
- * Última revisión: 19 de noviembre de 2020
-
+ * Última revisión: 15 de noviembre de 2022
  * Resumen: Cabeceras de las funciones de recorrido, búsqueda y modificación de
  *          vectores del tema 12.
 \******************************************************************************/
@@ -19,14 +18,14 @@ void mostrar(const Persona T[], const unsigned n);
 
 /*
  * Pre:  «T» tiene al menos «n» componentes.
- * Post: Ha devuelto el número de casados de las primeras «n» componentes del
+ * Post: Devuelve el número de casados de las primeras «n» componentes del
  *       vector «T».
  */
 unsigned numCasados(const Persona T[], const unsigned n);
 
 /*
  * Pre:  n > 0 y «T» tiene al menos «n» componentes.
- * Post: Ha devuelto la persona de más edad de entre las primeras «n»
+ * Post: Devuelve la persona de más edad de entre las primeras «n»
  *       componentes del vector «T».
  */
 Persona masEdad(const Persona T[], const unsigned n);
@@ -34,8 +33,8 @@ Persona masEdad(const Persona T[], const unsigned n);
 /*
  * Pre:  n > 0 y «T» tiene al menos «n» componentes.
  * Post: Si entre las personas almacenados en las primeras «n» componentes del
- *       vector «T» hay uno cuyo DNI es igual a «dniBuscado», entonces ha devuelto
- *       el índice de dicho elemento en el vector; si no lo hay, ha devuelto un
+ *       vector «T» hay uno cuyo DNI es igual a «dniBuscado», entonces devuelve
+ *       el índice de dicho elemento en el vector; si no lo hay, devuelve un
  *       dato negativo.
  */
 int buscar(const Persona T[], const unsigned n, const unsigned dniBuscado);
@@ -45,8 +44,8 @@ int buscar(const Persona T[], const unsigned n, const unsigned dniBuscado);
  *       «n» componentes del vector «T» están ordenados por valores del DNI
  *       crecientes.
  * Post: Si entre las personas almacenados en las primeras «n» componentes del
- *       vector «T» hay una cuyo DNI es igual a «dniBuscado», entonces ha devuelto
- *       el índice de dicho elemento en el vector; si no lo hay, ha devuelto un
+ *       vector «T» hay una cuyo DNI es igual a «dniBuscado», entonces devuelve
+ *       el índice de dicho elemento en el vector; si no lo hay, devuelve un
  *       valor negativo.
  */
 int buscarDicotomico(const Persona T[], const unsigned n, const unsigned dniBuscado);
@@ -54,8 +53,8 @@ int buscarDicotomico(const Persona T[], const unsigned n, const unsigned dniBusc
 /*
  * Pre:  n > 0 y «T» tiene al menos «n» componentes.
  * Post: Si entre las personas almacenados en las primeras «n» componentes del
- *       vector «T» hay una nacida en el año «agno», entonces ha devuelto el
- *       índice de dicho elemento en el vector; si no la hay, ha devuelto un valor
+ *       vector «T» hay una nacida en el año «agno», entonces devuelve el
+ *       índice de dicho elemento en el vector; si no la hay, devuelve un valor
  *       negativo.
  */
 int nacidoEn(const Persona T[], const unsigned n, const unsigned agno);

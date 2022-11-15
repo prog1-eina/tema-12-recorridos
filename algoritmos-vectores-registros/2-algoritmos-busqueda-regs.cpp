@@ -1,7 +1,7 @@
 ﻿/******************************************************************************\
  * Curso de Programación 1. Tema 12 (Algoritmos con vectores)
  * Autores: Javier Martínez y Miguel Ángel Latre
- * Última revisión: 19 de noviembre de 2020
+ * Última revisión: 15 de noviembre de 2022
  * Resumen: Algunas funciones de búsqueda de información en vectores
 \******************************************************************************/
 
@@ -91,8 +91,8 @@ int buscarDicotomico(const Persona T[], const unsigned n,
 /*
  * Pre:  «T» tiene al menos «n» componentes.
  * Post: Si entre las personas almacenadas en las primeras «n» componentes del
- *       vector «T» hay una nacida en el año «agno», entonces ha devuelto el
- *       índice de dicho elemento en el vector; si no la hay, ha devuelto un valor
+ *       vector «T» hay una nacida en el año «agno», entonces devuelve el
+ *       índice de dicho elemento en el vector; si no la hay, devuelve un valor
  *       negativo.
  */
 int nacidoEn(const Persona T[], const unsigned n, const unsigned agno) {

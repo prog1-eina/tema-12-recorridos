@@ -1,7 +1,7 @@
 /******************************************************************************\
  * Curso de Programación 1. Tema 12 (Algoritmos con vectores)
  * Autores: Miguel Ángel Latre
- * Última revisión: 19 de noviembre de 2020
+ * Última revisión: 15 de noviembre de 2022
 
  * Resumen: Cabeceras de las funciones de recorrido, búsqueda y modificación de
  *          vectores del tema 12.
@@ -16,14 +16,14 @@ void mostrar(const int T[], const unsigned n);
 
 /*
  * Pre:  «T» tiene al menos «n» componentes.
- * Post: Ha devuelto el número de datos negativos de las primeras «n»
+ * Post: Devuelve el número de datos negativos de las primeras «n»
  *       componentes del vector «T».
  */
 unsigned numNegativos(const int T[], const unsigned n);
 
 /*
  * Pre:  «T» tiene al menos «n» componentes y n > 0.
- * Post: Ha devuelto el máximo valor de entre los de las primeras «n»
+ * Post: Devuelve el máximo valor de entre los de las primeras «n»
  *       componentes del vector «T».
  */
 int maximo(const int T[], const unsigned n);

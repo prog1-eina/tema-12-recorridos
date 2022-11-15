@@ -1,7 +1,7 @@
 ﻿/******************************************************************************\
  * Curso de Programación 1. Tema 12 (Algoritmos con vectores)
  * Autores: Javier Martínez y Miguel Ángel Latre
- * Última revisión: 19 de noviembre de 2020
+ * Última revisión: 15 de noviembre de 2022
  * Resumen: Algunas funciones de búsqueda de información en vectores.
 \******************************************************************************/
 
@@ -63,8 +63,8 @@ int buscar2(const int T[], const unsigned n, const int datoBuscado) {
 
 /*
  * Pre:  «T» tiene al menos «n» componentes y EN AL MENOS UNA DE ELLAS SE
-         ENCUENTRA «DATOBUSCADO».
- * Post: Ha devuelto el índice de una componente cuyo valor es igual a
+         ENCUENTRA «datoBuscado».
+ * Post: Devuelve el índice de una componente cuyo valor es igual a
  *       «datoBuscado».
  */
 unsigned buscarGarantizado(const int T[], const int datoBuscado) {

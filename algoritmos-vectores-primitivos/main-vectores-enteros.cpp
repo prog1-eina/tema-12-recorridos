@@ -1,7 +1,7 @@
 /******************************************************************************\
  * Curso de Programación 1. Tema 12 (Algoritmos básicos con vectores)
  * Autores: Miguel Ángel Latre
- * Última revisión: 19 de noviembre de 2020
+ * Última revisión: 15 de noviembre de 2022
  * Resumen: Programa de prueba de las funciones de recorrido de vectores
  *          programadas en este directorio.
  * Nota: El código de este programa está repartido en varios módulos.
@@ -27,8 +27,8 @@ using namespace std;
  * este proyecto.
  */
 int main() {
-    const unsigned NUM_DATOS = 0/*9*/;
-    int vector[/*NUM_DATOS*/] = {3, 0, 5, -1, 2, -6, -4, 8, -9};
+    const unsigned NUM_DATOS = 9;
+    int vector[NUM_DATOS] = {3, 0, 5, -1, 2, -6, -4, 8, -9};
 
     cout << "DATOS DEL VECTOR" << endl;
     cout << "================" << endl;    

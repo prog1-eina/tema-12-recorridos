@@ -49,7 +49,7 @@ int main() {
     mostrar(ganadoresPremioCervantes, NUM_DATOS);
     cout << endl;
     
-    cout << "NÚMERO DE PERSONAS SOLTERAS: ";
+    cout << "NÚMERO DE PERSONAS CASADAS: ";
     cout << numCasados(ganadoresPremioCervantes, NUM_DATOS) << endl;    
     cout << endl;
 

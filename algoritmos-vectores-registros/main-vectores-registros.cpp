@@ -31,7 +31,7 @@ using namespace std;
  */
 int main() {
     const unsigned NUM_DATOS = 9;
-    Persona ganadoresPremioCervantes[] = {
+    Persona ganadoresPremioCervantes[NUM_DATOS] = {
             {"Joan",        "Margarit i Consarnau", {3297388, 'Q'}, {11,  5, 1938}, false}, 
             {"Eduardo",     "Mendoza Garriga",      { 195326, 'X'}, {11,  1, 1943}, false}, 
             {"Juan",        "Goytisolo",            {3678970, 'M'}, { 5,  1, 1931}, false}, 

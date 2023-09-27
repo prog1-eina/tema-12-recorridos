@@ -64,8 +64,7 @@ int main() {
     if (indice >= 0) {
         cout << "La persona con DNI " << 824677 << " es:" << endl;
         mostrar(ganadoresPremioCervantes[indice]);
-    }
-    else {
+    } else {
         cout << "Parece que la función «buscar» no funciona bien." << endl;
     }
     cout << endl;
@@ -73,8 +72,7 @@ int main() {
     indice = buscar(ganadoresPremioCervantes, NUM_DATOS, 12345678);
     if (indice < 0) {
         cout << "No hay ninguna persona con DNI " << 12345678 << '.' << endl;
-    }
-    else {
+    } else {
         cout << "Parece que la función «buscar» no funciona bien." << endl;
     }
     cout << endl;
@@ -83,8 +81,7 @@ int main() {
     if (indice >= 0) {
         cout << "Una persona nacida en " << 1933 << " es:" << endl;
         mostrar(ganadoresPremioCervantes[indice]);
-    }
-    else {
+    } else {
         cout << "Parece que la función «nacidoEn» no funciona bien." << endl;
     }
     cout << endl;
@@ -100,8 +97,7 @@ int main() {
     if (indice >= 0) {
         cout << "La persona con DNI " << 801649 << " es:" << endl;
         mostrar(ganadoresPremioCervantes[indice]);
-    }
-    else {
+    } else {
         cout << "Parece que la función «buscarDicotomico» no funciona bien." << endl;
     }
     cout << endl;
@@ -109,8 +105,7 @@ int main() {
     indice = buscarDicotomico(ganadoresPremioCervantes, NUM_DATOS, 87654321);
     if (indice < 0) {
         cout << "No hay ninguna persona con DNI " << 87654321 << '.' << endl;
-    }
-    else {
+    } else {
         cout << "Parece que la función «buscarDicotomico» no funciona bien." << endl;
     }
     cout << endl;

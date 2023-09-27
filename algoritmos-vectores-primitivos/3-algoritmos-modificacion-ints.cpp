@@ -37,8 +37,7 @@ void distribuir(int T[], const unsigned n) {
         else if (T[sup] % 2 != 0) {
             // T[sup] es impar; por lo tanto está bien situado al final.
             sup = sup - 1;
-        }
-        else {
+        } else {
             // T[inf] es impar y T[sup] es par; por ello van a ser permutados, 
             // para ser colocados en la parte del vector que les corresponde.
             permutar(T[inf], T[sup]);

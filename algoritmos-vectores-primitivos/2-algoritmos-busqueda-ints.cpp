@@ -21,8 +21,7 @@ int buscar(const int T[], const unsigned n, const int datoBuscado) {
     while (!encontrado && i < n) {
         if (T[i] == datoBuscado) {
             encontrado = true;
-        }
-        else {
+        } else {
             i = i + 1;
         }
     } // encontrado || i ≥ n
@@ -30,8 +29,7 @@ int buscar(const int T[], const unsigned n, const int datoBuscado) {
     /* Discriminación del éxito */
     if (encontrado) {
         return i;
-    }
-    else {
+    } else {
         return -1;
     }
 }
@@ -55,8 +53,7 @@ int buscar2(const int T[], const unsigned n, const int datoBuscado) {
     /* Discriminación del éxito */
     if (i < n) {
         return i;
-    }
-    else {
+    } else {
         return -1;
     }
 }
@@ -93,8 +90,7 @@ int buscarDicotomico(const int T[], const unsigned n,
     if (n == 0) {
         // Si hay 0 componentes, el dato no está
         return -1;
-    }
-    else {
+    } else {
         // Espacio de búsqueda: establecimiento en T[0..n-1]
         unsigned inf = 0;
         unsigned sup = n - 1;
@@ -107,8 +103,7 @@ int buscarDicotomico(const int T[], const unsigned n,
             if (datoBuscado > T[medio]) {
                 // Espacio de búsqueda: T[medio+1..sup]
                 inf = medio + 1;
-            }
-            else {
+            } else {
                 // Espacio de búsqueda: T[inf..medio]
                 sup = medio;
             }
@@ -120,8 +115,7 @@ int buscarDicotomico(const int T[], const unsigned n,
         /* Discriminación del éxito */
         if (T[inf] == datoBuscado) {
             return inf;
-        }
-        else {
+        } else {
             return -1;
         }
     }

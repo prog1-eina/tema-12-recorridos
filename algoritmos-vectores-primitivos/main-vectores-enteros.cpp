@@ -48,8 +48,7 @@ int main() {
     int indice = buscar(vector, NUM_DATOS, -4);
     if (indice >= 0) {
         cout << "El dato " << -4 << " está en el índice: " << indice << endl;
-    }
-    else {
+    } else {
         cout << "Parece que la función «buscar» no funciona bien." << endl;
     }
     cout << endl;
@@ -57,8 +56,7 @@ int main() {
     indice = buscar(vector, NUM_DATOS, 7);
     if (indice < 0) {
         cout << "El dato " << 7 << " no está en el vector" << endl;
-    }
-    else {
+    } else {
         cout << "Parece que la función «buscar» no funciona bien." << endl;
     }
     cout << endl;
@@ -73,8 +71,7 @@ int main() {
     indice = buscarDicotomico(vector, NUM_DATOS, -4);
     if (indice >= 0) {
         cout << "El dato " << -4 << " está en el índice: " << indice << endl;
-    }
-    else {
+    } else {
         cout << "Parece que la función «buscarDicotomico» no funciona bien." << endl;
     }
     cout << endl;
@@ -82,8 +79,7 @@ int main() {
     indice = buscarDicotomico(vector, NUM_DATOS, 7);
     if (indice < 0) {
         cout << "El dato " << 7 << " no está en el vector" << endl;
-    }
-    else {
+    } else {
         cout << "Parece que la función «buscarDicotomico» no funciona bien." << endl;
     }
     cout << endl;

@@ -39,8 +39,7 @@ void distribuir(Persona T[], const unsigned n) {
         else if (T[sup].estaCasada) {
             // T[sup] está casado; por lo tanto está bien situado al final.
             sup = sup - 1;
-        }
-        else {
+        } else {
             // T[inf] está casado y T[sup] está soltero; por ello van a ser permutados, para
             // ser colocados en la parte del vector que les corresponde.
             permutar(T[inf], T[sup]);

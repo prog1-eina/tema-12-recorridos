@@ -23,8 +23,7 @@ int buscar(const Persona T[], const unsigned n, const unsigned dniBuscado) {
     while (!encontrado && i < n) {
         if (T[i].nif.dni == dniBuscado) {
             encontrado = true;
-        }
-        else {
+        } else {
             i = i + 1;
         }
     } // encontrado || i ≥ n
@@ -32,8 +31,7 @@ int buscar(const Persona T[], const unsigned n, const unsigned dniBuscado) {
     /* Discriminación del éxito */
     if (encontrado) {
         return i;
-    }
-    else {
+    } else {
         return -1;
     }
 }
@@ -53,8 +51,7 @@ int buscarDicotomico(const Persona T[], const unsigned n,
     if (n == 0) {
         // Si hay 0 componentes, el dato no está
         return false;
-    }
-    else {
+    } else {
         // Espacio de búsqueda: establecimiento en T[0..n-1]
         unsigned inf = 0;
         unsigned sup = n - 1;
@@ -67,8 +64,7 @@ int buscarDicotomico(const Persona T[], const unsigned n,
             if (dniBuscado > T[medio].nif.dni) {
                 // Espacio de búsqueda: T[medio+1..sup]
                 inf = medio + 1;
-            }
-            else {
+            } else {
                 // Espacio de búsqueda: T[inf..medio]
                 sup = medio;
             }
@@ -80,8 +76,7 @@ int buscarDicotomico(const Persona T[], const unsigned n,
         /* Discriminación del éxito */
         if (T[inf].nif.dni == dniBuscado) {
             return inf;
-        }
-        else {
+        } else {
             return -1;
         }
     }
@@ -109,8 +104,7 @@ int nacidoEn(const Persona T[], const unsigned n, const unsigned agno) {
         if (agno == T[i].nacimiento.agno) {
             // La búsqueda debe concluir ya que T[i] es el elemento buscado
             encontrado = true;
-        }
-        else {
+        } else {
             // La búsqueda continúa en el espacio de búsqueda T[i+1..n-1]
             i = i + 1;
         }
@@ -120,8 +114,7 @@ int nacidoEn(const Persona T[], const unsigned n, const unsigned agno) {
     if (encontrado) {
         // La búsqueda ha concluido con éxito
         return i;
-    }
-    else {
+    } else {
         // La búsqueda ha concluido sin éxito
         return -1;
     }

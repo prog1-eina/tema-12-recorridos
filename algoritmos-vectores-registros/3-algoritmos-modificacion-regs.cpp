@@ -35,8 +35,7 @@ void distribuir(Persona T[], const unsigned n) {
         if (!T[inf].estaCasada) {
             // T[inf] está soltero; por lo tanto está bien situado, al principio del vector.
             inf = inf + 1;
-        }
-        else if (T[sup].estaCasada) {
+        } else if (T[sup].estaCasada) {
             // T[sup] está casado; por lo tanto está bien situado al final.
             sup = sup - 1;
         } else {

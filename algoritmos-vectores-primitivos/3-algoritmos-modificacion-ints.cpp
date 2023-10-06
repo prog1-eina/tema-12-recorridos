@@ -33,8 +33,7 @@ void distribuir(int T[], const unsigned n) {
         if (T[inf] % 2 == 0) {
             // T[inf] es par; por lo tanto está bien situado, al principio.
             inf = inf + 1;
-        }
-        else if (T[sup] % 2 != 0) {
+        } else if (T[sup] % 2 != 0) {
             // T[sup] es impar; por lo tanto está bien situado al final.
             sup = sup - 1;
         } else {

@@ -7,9 +7,7 @@
  * Nota: El código de este programa está repartido en varios módulos.
  *       Para compilarlo, hay que ejecutar el comando
  *           make ejemplo-vectores-enteros
- *       o, en Windows,
- *           mingw32-make ejemplo-vectores-enteros
- *       o ejecutar la tarea "Compilar «ejemplo-vectores-enteros»" de VSC.
+  *       o ejecutar la tarea "Compilar «ejemplo-vectores-enteros»" de VSC.
  * 
  *       Para ejecutarlo, una vez compilado, hay que ejecutar el comando
  *           bin/ejemplo-vectores-enteros

@@ -10,9 +10,6 @@
             "label": "Compilar «ejemplo-vectores-registros»",
             "type": "shell",
             "command": "make",
-            "windows": {
-                "command": "mingw32-make.exe",
-            },
             "args": [
                 "ejemplo-vectores-registros"
             ],
@@ -33,9 +30,6 @@
             "label": "Compilar «ejemplo-vectores-enteros»",
             "type": "shell",
             "command": "make",
-            "windows": {
-                "command": "mingw32-make.exe",
-            },
             "args": [
                 "ejemplo-vectores-enteros"
             ],
@@ -56,9 +50,6 @@
             "label": "Limpiar resultados de compilación",
             "type": "shell",
             "command": "make",
-            "windows": {
-                "command": "mingw32-make.exe",
-            },
             "args": [
                 "clean"
             ],

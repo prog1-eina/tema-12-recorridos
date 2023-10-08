@@ -9,9 +9,7 @@
  * Nota: El código de este programa está repartido en varios módulos.
  *       Para compilarlo, hay que ejecutar el comando
  *           make ejemplo-vectores-registros
- *       o, en Windows,
- *           mingw32-make ejemplo-vectores-registros
- *       o ejecutar la tarea "Compilar «ejemplo-vectores-registros»" de VSC.
+  *       o ejecutar la tarea "Compilar «ejemplo-vectores-registros»" de VSC.
  * 
  *       Para ejecutarlo, una vez compilado, hay que ejecutar el comando
  *           bin/ejemplo-vectores-registros

@@ -58,7 +58,7 @@ void distribuir(int T[], const unsigned n) {
  * Pre:  «T» tiene al menos «n» componentes.
  * Post: El contenido de las primeras «n» componentes del vector «T» es una
  *       permutación del contenido inicial de «T» en la que todos ellos están
- *       ordenados de forma que tienen valores del DNI crecientes.
+ *       ordenados de forma que tienen valores crecientes.
  */
 void ordenar(int T[], const unsigned n) {
     if (n != 0) {

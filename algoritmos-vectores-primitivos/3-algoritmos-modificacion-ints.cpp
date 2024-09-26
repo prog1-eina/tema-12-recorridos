@@ -9,7 +9,7 @@
  * Pre:  dato1 = A y dato2 = B
  * Post: dato1 = B y dato2 = A
  */
-void permutar (int& dato1, int& dato2) {
+void permutar (int &dato1, int &dato2) {
     int aux = dato1;
     dato1 = dato2;
     dato2 = aux;

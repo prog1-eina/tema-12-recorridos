@@ -21,7 +21,8 @@
             "type": "shell",
             "command": "bin/ejemplo-vectores-registros",
             "windows": {
-                "command": "chcp 65001 ; bin\\ejemplo-vectores-registros.exe",
+                "command": "cmd",
+                "args": ["/c", "chcp 65001 && bin\\ejemplo-vectores-registros.exe"]
             },
             "dependsOn": "Compilar «ejemplo-vectores-registros»",
             "problemMatcher": ["$gcc"],
@@ -41,7 +42,8 @@
             "type": "shell",
             "command": "bin/ejemplo-vectores-enteros",
             "windows": {
-                "command": "chcp 65001 ; bin\\ejemplo-vectores-enteros.exe",
+                "command": "cmd",
+                "args": ["/c", "chcp 65001 && bin\\ejemplo-vectores-enteros.exe"]
             },
             "dependsOn": "Compilar «ejemplo-vectores-enteros»",
             "problemMatcher": ["$gcc"],

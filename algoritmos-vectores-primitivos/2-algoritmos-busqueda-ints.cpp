@@ -59,8 +59,7 @@ int buscar2(const int T[], const unsigned n, const int datoBuscado) {
 }
 
 /*
- * Pre:  «T» tiene al menos «n» componentes y EN AL MENOS UNA DE ELLAS SE
-         ENCUENTRA «datoBuscado».
+ * Pre:  EN AL MENOS UNA COMPONENTE DE «T» SE ENCUENTRA «datoBuscado».
  * Post: Devuelve el índice de una componente cuyo valor es igual a
  *       «datoBuscado».
  */

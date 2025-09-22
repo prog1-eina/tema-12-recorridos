@@ -1,9 +1,9 @@
-﻿/******************************************************************************\
+﻿/******************************************************************************
  * Curso de Programación 1. Tema 12 (Algoritmos con vectores)
  * Autores: Javier Martínez y Miguel Ángel Latre
  * Última revisión: 15 de noviembre de 2022
  * Resumen: Algunas funciones de búsqueda de información en vectores
-\******************************************************************************/
+ *****************************************************************************/
 
 #include "persona.hpp"
 
@@ -38,9 +38,9 @@ int buscar(const Persona T[], const unsigned n, const unsigned dniBuscado) {
 
 
 /*
- * Pre:  «T» tiene al menos «n» componentes y los elementos de las
- *       primeras «n» componentes del vector «T» ESTÁN ORDENADOS POR VALORES DEL 
- *       DNI CRECIENTES.
+ * Pre:  «T» tiene al menos «n» componentes y los elementos de las primeras «n»
+ *       componentes del vector «T» ESTÁN ORDENADOS POR VALORES DEL DNI
+ *       CRECIENTES.
  * Post: Si entre las personas almacenadas en las primeras «n» componentes del
  *       vector «T» hay una cuyo DNI es igual a «dniBuscado», entonces 
  *       devuelve el índice de dicho elemento en el vector; si no la hay, 
@@ -100,7 +100,8 @@ int nacidoEn(const Persona T[], const unsigned n, const unsigned agno) {
     bool encontrado = false;
 
     while (!encontrado && i < n) {
-        // No ha habido éxito tras buscar en T[0..i-1]. Analiza el elemento T[i]
+        // No ha habido éxito tras buscar en T[0..i-1].
+        // Analiza el elemento T[i]:
         if (agno == T[i].nacimiento.agno) {
             // La búsqueda debe concluir ya que T[i] es el elemento buscado
             encontrado = true;

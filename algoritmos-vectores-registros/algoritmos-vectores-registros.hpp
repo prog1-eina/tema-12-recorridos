@@ -1,10 +1,10 @@
-/******************************************************************************\
+/******************************************************************************
  * Curso de Programación 1. Tema 12 (Algoritmos con vectores)
  * Autores: Javier Martínez y Miguel Ángel Latre
  * Última revisión: 15 de noviembre de 2022
  * Resumen: Cabeceras de las funciones de recorrido, búsqueda y modificación de
  *          vectores del tema 12.
-\******************************************************************************/
+ *****************************************************************************/
 
 #include "persona.hpp"
 
@@ -40,15 +40,16 @@ Persona masEdad(const Persona T[], const unsigned n);
 int buscar(const Persona T[], const unsigned n, const unsigned dniBuscado);
 
 /*
- * Pre:  n > 0, «T» tiene al menos «n» componentes y los elementos de las primeras
- *       «n» componentes del vector «T» están ordenados por valores del DNI
- *       crecientes.
- * Post: Si entre las personas almacenados en las primeras «n» componentes del
+ * Pre:  n > 0, «T» tiene al menos «n» componentes y los elementos de las
+ *       primeras «n» componentes del vector «T» están ordenados por valores
+ *       del DNI crecientes.
+ * Post: Si entre las personas almacenadas en las primeras «n» componentes del
  *       vector «T» hay una cuyo DNI es igual a «dniBuscado», entonces devuelve
  *       el índice de dicho elemento en el vector; si no lo hay, devuelve un
  *       valor negativo.
  */
-int buscarDicotomico(const Persona T[], const unsigned n, const unsigned dniBuscado);
+int buscarDicotomico(const Persona T[], const unsigned n,
+                     const unsigned dniBuscado);
 
 /*
  * Pre:  n > 0 y «T» tiene al menos «n» componentes.
@@ -83,7 +84,7 @@ void ordenarPorDNI(Persona T[], const unsigned n);
  * Pre:  n > 0 y «T» tiene al menos «n» componentes.
  * Post: El contenido de las primeras «n» componentes del vector «T» es una
  *       permutación del contenido inicial de «T» en la que todas ellas están
- *       ordenadas de forma que cada una ha nacido en una fecha igual o anterior
- *       a la siguiente en el vector «T».
+ *       ordenadas de forma que cada una ha nacido en una fecha igual o
+ *       anterior a la siguiente en el vector «T».
  */
 void ordenarPorEdad(Persona T[], const unsigned n);

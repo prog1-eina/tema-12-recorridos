@@ -1,15 +1,15 @@
-/******************************************************************************\
+/******************************************************************************
  * Curso de Programación 1. Tema 12 (Algoritmos con vectores)
  * Autores: Miguel Ángel Latre
  * Última revisión: 15 de noviembre de 2022
 
  * Resumen: Cabeceras de las funciones de recorrido, búsqueda y modificación de
  *          vectores del tema 12.
-\******************************************************************************/
+ *****************************************************************************/
 
 /*
  * Pre:  «T» tiene al menos «n» componentes.
- * Post: Presenta por pantalla un listado con los elementos de las primeras «n» 
+ * Post: Presenta por pantalla un listado con los elementos de las primeras «n»
  *       componentes del vector «T», a razón de un elemento por línea.
  */
 void mostrar(const int T[], const unsigned n);

@@ -1,9 +1,9 @@
-﻿/******************************************************************************\
+﻿/******************************************************************************
  * Curso de Programación 1. Tema 12 (Algoritmos con vectores)
  * Autores: Javier Martínez y Miguel Ángel Latre
  * Última revisión: 15 de noviembre de 2022
  * Resumen: Algunas funciones de búsqueda de información en vectores.
-\******************************************************************************/
+ *****************************************************************************/
 
 
 /*

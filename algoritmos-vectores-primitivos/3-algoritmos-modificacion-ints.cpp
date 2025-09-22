@@ -1,9 +1,9 @@
-﻿/******************************************************************************\
+﻿/******************************************************************************
  * Curso de Programación 1. Tema 12 (Algoritmos con vectores)
  * Autores: Javier Martínez y Miguel Ángel Latre
  * Última revisión: 19 de noviembre de 2020
  * Resumen: Algunas funciones que modifican el contenido de vectores.
-\******************************************************************************/
+ *****************************************************************************/
 
 /*
  * Pre:  dato1 = A y dato2 = B
@@ -49,8 +49,9 @@ void distribuir(int T[], const unsigned n) {
     }
     // inf >= sup --> Los datos de «T» en las componentes de índices en
     // en el intervalo [0, inf-1] son todos pares y los que están en las
-    // índices [inf, n - 1] son todos impares. Por lo tanto, todos los elementos
-    // de las primeras «n» componentes del vector «T» han sido distribuidos.
+    // índices [inf, n - 1] son todos impares. Por lo tanto, todos los
+    // elementos de las primeras «n» componentes del vector «T» han sido
+    // distribuidos.
 }
 
 
@@ -64,8 +65,8 @@ void ordenar(int T[], const unsigned n) {
     if (n != 0) {
         // Ordenación de un vector por el método de selección
         for (unsigned i = 0; i < n - 1; i++) {
-            /* Los datos de las primeras i-1 componentes de «T» son los de menor
-            * valor y ya están ordenados. */
+            /* Los datos de las primeras i-1 componentes de «T» son los de
+             * menor valor y ya están ordenados. */
 
             // Selección del dato de menor valor de T[i..n-1]
             unsigned iMenor = i;
@@ -76,7 +77,8 @@ void ordenar(int T[], const unsigned n) {
                 }
                 // T[iMenor] es el de menor valor de T[i..j]
             }
-            // T[iMenor] es el de menor valor de T[i..n-1]. Permuta T[i] y T[iMenor]
+            // T[iMenor] es el de menor valor de T[i..n-1].
+            // Permuta T[i] y T[iMenor]
             permutar(T[i], T[iMenor]);
             /* Los datos de las primeras i-1 componentes del vector «T» son los
             * de menor valor y ya están ordenadas */

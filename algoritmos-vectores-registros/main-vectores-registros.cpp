@@ -1,4 +1,4 @@
-/******************************************************************************\
+/******************************************************************************
  * Curso de Programación 1. Tema 12 (Algoritmos básicos con vectores)
  * Autores: Miguel Ángel Latre
  * Última revisión: 19 de noviembre de 2020
@@ -16,7 +16,7 @@
  *       o, en Windows,
  *           bin\ejemplo-vectores-registros.exe
  *       o ejecutar la tarea "Ejecutar «ejemplo-vectores-registros»" de VSC.
-\******************************************************************************/
+ *****************************************************************************/
 #include <iostream>
 #include "persona.hpp"
 #include "algoritmos-vectores-registros.hpp"
@@ -30,17 +30,18 @@ using namespace std;
 int main() {
     const unsigned NUM_DATOS = 9;
     Persona ganadoresPremioCervantes[NUM_DATOS] = {
-            {"Joan",        "Margarit i Consarnau", {3297388, 'Q'}, {11,  5, 1938}, false}, 
-            {"Eduardo",     "Mendoza Garriga",      { 195326, 'X'}, {11,  1, 1943}, false}, 
-            {"Juan",        "Goytisolo",            {3678970, 'M'}, { 5,  1, 1931}, false}, 
-            {"Ana María",   "Matute Ausejo",        { 824677, 'N'}, {26,  7, 1925}, true}, 
-            {"Juan",        "Marsé Carbó",          {1041468, 'M'}, { 8,  1, 1933}, false}, 
-            {"Camilo José", "Cela y Trulock",       {2758574, 'T'}, {11,  5, 1916}, false}, 
-            {"Mario",       "Vargas Llosa",         {4677522, 'N'}, {28,  3, 1936}, false}, 
-            {"Miguel",      "Delibes Setién",       { 801649, 'F'}, {17, 10, 1920}, false}, 
-            {"María",       "Zambrano Alarcón",     {4662531, 'V'}, {22,  4, 1904}, true}
+        {"Joan", "Margarit i Consarnau", {3297388, 'Q'}, {11, 5, 1938}, false},
+        {"Eduardo", "Mendoza Garriga",   { 195326, 'X'}, {11, 1, 1943}, false},
+        {"Juan",        "Goytisolo",     {3678970, 'M'}, { 5, 1, 1931}, false},
+        {"Ana María",   "Matute Ausejo", { 824677, 'N'}, {26, 7, 1925}, true},
+        {"Juan",        "Marsé Carbó",   {1041468, 'M'}, { 8, 1, 1933}, false},
+        {"Camilo José", "Cela Trulock",  {2758574, 'T'}, {11, 5, 1916}, false},
+        {"Mario",       "Vargas Llosa",  {4677522, 'N'}, {28, 3, 1936}, false},
+        {"Miguel",    "Delibes Setién",  {801649, 'F'}, {17, 10, 1920}, false},
+        {"María",    "Zambrano Alarcón", {4662531, 'V'}, {22, 4, 1904}, true}
     };
-    // NIF y estado civil no reales, resto de datos obtenidos de Wikipedia (https://es.wikipedia.org/)
+    // NIF y estado civil no reales,
+    // resto de datos obtenidos de Wikipedia (https://es.wikipedia.org/)
 
     cout << "DATOS DEL VECTOR" << endl;
     cout << "================" << endl;    
@@ -96,7 +97,8 @@ int main() {
         cout << "La persona con DNI " << 801649 << " es:" << endl;
         mostrar(ganadoresPremioCervantes[indice]);
     } else {
-        cout << "Parece que la función «buscarDicotomico» no funciona bien." << endl;
+        cout << "Parece que la función «buscarDicotomico» no funciona bien."
+             << endl;
     }
     cout << endl;
 
@@ -104,7 +106,8 @@ int main() {
     if (indice < 0) {
         cout << "No hay ninguna persona con DNI " << 87654321 << '.' << endl;
     } else {
-        cout << "Parece que la función «buscarDicotomico» no funciona bien." << endl;
+        cout << "Parece que la función «buscarDicotomico» no funciona bien."
+             << endl;
     }
     cout << endl;
     

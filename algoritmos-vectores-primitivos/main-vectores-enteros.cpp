@@ -1,4 +1,4 @@
-/******************************************************************************\
+/******************************************************************************
  * Curso de Programación 1. Tema 12 (Algoritmos básicos con vectores)
  * Autores: Miguel Ángel Latre
  * Última revisión: 15 de noviembre de 2022
@@ -14,7 +14,7 @@
  *       o, en Windows,
  *           bin\ejemplo-vectores-enteros.exe
  *       o ejecutar la tarea "Ejecutar «ejemplo-vectores-enteros»" de VSC.
-\******************************************************************************/
+ *****************************************************************************/
 #include <iostream>
 #include "algoritmos-vectores-enteros.hpp"
 using namespace std;
@@ -70,7 +70,8 @@ int main() {
     if (indice >= 0) {
         cout << "El dato " << -4 << " está en el índice: " << indice << endl;
     } else {
-        cout << "Parece que la función «buscarDicotomico» no funciona bien." << endl;
+        cout << "Parece que la función «buscarDicotomico» no funciona bien."
+             << endl;
     }
     cout << endl;
 
@@ -78,7 +79,8 @@ int main() {
     if (indice < 0) {
         cout << "El dato " << 7 << " no está en el vector" << endl;
     } else {
-        cout << "Parece que la función «buscarDicotomico» no funciona bien." << endl;
+        cout << "Parece que la función «buscarDicotomico» no funciona bien."
+             << endl;
     }
     cout << endl;
     

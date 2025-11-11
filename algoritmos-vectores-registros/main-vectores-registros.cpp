@@ -123,7 +123,7 @@ int main() {
     mostrar(ganadoresPremioCervantes[0]);
     cout << endl;
     
-    cout << "La persona de menos edad es:" << endl;
+    cout << "La persona de menor edad es:" << endl;
     mostrar(ganadoresPremioCervantes[NUM_DATOS - 1]);
 
     return 0;

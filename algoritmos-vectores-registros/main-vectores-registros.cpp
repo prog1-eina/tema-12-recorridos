@@ -1,7 +1,7 @@
 /******************************************************************************
  * Curso de Programación 1. Tema 12 (Algoritmos básicos con vectores)
  * Autores: Miguel Ángel Latre
- * Última revisión: 19 de noviembre de 2020
+ * Última revisión: 11 de noviembre de 2025
  * Resumen: Programa de prueba de las funciones de recorrido de vectores
  *          programadas en este proyecto.
  * Dependencias: módulos «nif», «fecha» y «persona», ubicado en el directorio

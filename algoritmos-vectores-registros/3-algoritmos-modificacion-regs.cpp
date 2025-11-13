@@ -35,17 +35,17 @@ void distribuir(Persona T[], const unsigned n) {
         if (!T[inf].estaCasada) {
             // T[inf] está soltero; por lo tanto está bien situado,
             // al principio del vector.
-            inf = inf + 1;
+            inf++;
         } else if (T[sup].estaCasada) {
             // T[sup] está casado; por lo tanto está bien situado al final.
-            sup = sup - 1;
+            sup--;
         } else {
             // T[inf] está casado y T[sup] está soltero; por ello van a ser
             // permutados, para ser colocados en la parte del vector que les
             // corresponde.
             permutar(T[inf], T[sup]);
-            inf = inf + 1;
-            sup = sup - 1;
+            inf++;
+            sup--;
         }
         // Las personas de «T» en los índices en [0, inf-1] son todas solteras
         // y las que están en los índices [sup + 1, n - 1] son todas casadas.

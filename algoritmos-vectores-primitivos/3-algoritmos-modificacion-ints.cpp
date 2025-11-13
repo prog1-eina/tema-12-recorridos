@@ -32,16 +32,16 @@ void distribuir(int T[], const unsigned n) {
         // Faltan por distribuir los elementos en el intervalo [inf, sup].
         if (T[inf] % 2 == 0) {
             // T[inf] es par; por lo tanto está bien situado, al principio.
-            inf = inf + 1;
+            inf++;
         } else if (T[sup] % 2 != 0) {
             // T[sup] es impar; por lo tanto está bien situado al final.
-            sup = sup - 1;
+            sup--;
         } else {
             // T[inf] es impar y T[sup] es par; por ello van a ser permutados, 
             // para ser colocados en la parte del vector que les corresponde.
             permutar(T[inf], T[sup]);
-            inf = inf + 1;
-            sup = sup - 1;
+            inf++;
+            sup--;
         }
         // Los datos de «T» en los índices en [0, inf-1] son todos pares
         // y los que están en los índices [sup + 1, n - 1] son todas impares.

@@ -29,7 +29,7 @@ CXX = g++
 
 # Variable preestablecida de «make» que en la que se puede definir las opciones
 # con las que debe invocarse al compilador.
-CXXFLAGS = -g -Wall -Wextra -I$(SOURCE_PERSONAS_DIR)
+CXXFLAGS = -Og -Wall -Wextra -I$(SOURCE_PERSONAS_DIR)
 
 
 ## FICHEROS OBJETO (RESULTADOS INTERMEDIOS DE COMPILACIÓN):
@@ -50,10 +50,10 @@ OBJECTS_PRIMITIVOS = $(addprefix $(BUILD_DIR)/, 1-algoritmos-recorrido-ints.o \
 ## Reglas del fichero «Makefile»
 
 ejemplo-vectores-registros: $(OBJECTS_REGISTROS) | $(BIN_DIR)
-	$(CXX) -o $(BIN_DIR)/$@ -g $(OBJECTS_REGISTROS) 
+	$(CXX) -o $(BIN_DIR)/$@ -Og $(OBJECTS_REGISTROS) 
 
 ejemplo-vectores-enteros: $(OBJECTS_PRIMITIVOS) | $(BIN_DIR)
-	$(CXX) -o $(BIN_DIR)/$@ -g $(OBJECTS_PRIMITIVOS) 
+	$(CXX) -o $(BIN_DIR)/$@ -Og $(OBJECTS_PRIMITIVOS) 
 
 $(BUILD_DIR)/%.o: %.cpp | $(BUILD_DIR)
 	$(CXX) $(CXXFLAGS) -c $< -o $@  
